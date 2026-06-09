@@ -1,0 +1,9 @@
+{
+  "name": "maxlife-staging-preview",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static staging preview of the new MaxLife homepage + coaching page for Ben & Beth review.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

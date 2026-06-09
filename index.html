@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MaxLife · Podcast & Private Coaching with Ben Laws</title>
+<meta name="description" content="MaxLife is Ben Laws: the podcast where founders talk about building wealth, leading people, and living the life they actually want, plus private creative-producer coaching for founders running $5M–$50M companies." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5EFE2;--paper-deep:#EBE3D0;--paper-warm:#FBF7ED;--navy:#0F172A;--navy-deep:#080D1A;
+  --gold:#D4A853;--gold-light:#E5C679;--clay:#B85932;--clay-deep:#8A3F1E;--clay-soft:#F3D6C4;
+  --sage-deep:#525E40;--sage-soft:#DDE2CC;--ink:#0A0B0F;--ink-soft:#2B2E36;--rye:#5C5950;
+  --rule:rgba(10,11,15,.18);--rule-soft:rgba(10,11,15,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:400;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--clay-deep);text-decoration:none;transition:color .2s}
+a:hover{color:var(--clay)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(24px,5vw,80px)}
+.eyebrow{font-family:'Inter';font-weight:700;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay-deep)}
+.accent{color:var(--clay)}
+.btn-primary{display:inline-block;padding:17px 34px;font-family:'Inter';font-weight:700;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;background:var(--navy);color:var(--paper);transition:background .2s,transform .2s}
+.btn-primary:hover{background:var(--clay);color:var(--paper);transform:translateY(-2px)}
+.btn-secondary{display:inline-block;padding:17px 24px;font-family:'Inter';font-weight:700;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--navy);transition:.2s}
+.btn-secondary:hover{color:var(--clay);border-color:var(--clay)}
+section{border-bottom:1px solid var(--rule-soft)}
+
+/* NAV */
+nav.top{padding:16px 0;position:sticky;top:0;background:rgba(245,239,226,.95);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid var(--rule-soft)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .logo{width:42px;height:42px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Big Shoulders Display';font-weight:900;font-size:21px}
+.brand .name{font-family:'Big Shoulders Display';font-weight:800;font-size:20px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+.brand .name em{font-style:normal;color:var(--clay)}
+.nav-links{display:flex;gap:26px;margin-left:auto;margin-right:28px}
+.nav-links a{font-family:'JetBrains Mono';font-weight:500;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rye)}
+.nav-links a:hover{color:var(--clay)}
+.nav-cta{font-family:'Inter';font-weight:700;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase;padding:11px 20px;background:var(--navy);color:var(--paper)}
+.nav-cta:hover{background:var(--clay);color:var(--paper)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--paper-warm),var(--paper))}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:center;padding:clamp(48px,7vw,96px) 0}
+.hero h1{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:900;font-size:clamp(64px,13vw,180px);line-height:.82;letter-spacing:-.025em;text-transform:uppercase;color:var(--navy);margin:14px 0 0}
+.hero h1 em{font-style:normal;color:var(--clay)}
+.hero .tagline{font-family:'Big Shoulders Display';font-weight:700;font-size:clamp(20px,2.4vw,30px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;color:var(--sage-deep);margin-top:18px}
+.hero .sub{font-weight:500;font-size:clamp(16px,1.7vw,19px);line-height:1.5;color:var(--ink-soft);max-width:46ch;margin:20px 0 28px}
+.hero .sub strong{color:var(--ink);font-weight:700}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-portrait{position:relative;border:1.5px solid var(--navy);background:var(--paper-warm);box-shadow:16px 16px 0 var(--paper-deep)}
+.hero-portrait img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center top}
+.hero-portrait .cap{position:absolute;left:0;bottom:0;background:var(--navy);color:var(--gold);font-family:'JetBrains Mono';font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero-portrait{max-width:380px}}
+
+/* TWO DOORS */
+.doors{background:var(--navy)}
+.doors-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.door{padding:clamp(40px,5vw,72px) clamp(28px,4vw,56px);display:flex;flex-direction:column;min-height:340px;position:relative;transition:background .25s}
+.door:first-child{border-right:1px solid rgba(245,239,226,.16)}
+.door:hover{background:var(--navy-deep)}
+.door .k{font-family:'JetBrains Mono';font-weight:600;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.door h2{font-family:'Big Shoulders Display';font-weight:900;font-size:clamp(32px,4.4vw,58px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--paper-warm)}
+.door h2 .accent{color:var(--gold)}
+.door p{color:rgba(245,239,226,.74);font-size:1rem;font-weight:500;margin:16px 0 26px;max-width:42ch}
+.door .go{margin-top:auto;font-family:'Inter';font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;color:var(--paper-warm);border-bottom:2px solid var(--gold);align-self:flex-start;padding-bottom:3px}
+.door:hover .go{color:var(--gold)}
+@media(max-width:760px){.doors-grid{grid-template-columns:1fr}.door:first-child{border-right:0;border-bottom:1px solid rgba(245,239,226,.16)}}
+
+/* SECTION HEAD */
+.shead{margin-bottom:40px;max-width:60ch}
+.shead .eyebrow{display:block;margin-bottom:16px}
+.shead h2{font-family:'Big Shoulders Display';font-weight:900;font-size:clamp(30px,4.6vw,64px);line-height:.94;letter-spacing:-.02em;text-transform:uppercase;color:var(--navy)}
+.shead p{font-weight:500;font-size:clamp(15px,1.6vw,18px);color:var(--ink-soft);margin-top:16px;max-width:56ch}
+
+/* LATEST EPISODES */
+.episodes{background:var(--paper);padding:clamp(56px,8vw,104px) 0}
+.ehead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.ecards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ecard{display:flex;flex-direction:column;border:1.5px solid var(--rule);background:var(--paper-warm);transition:transform .2s,box-shadow .2s,border-color .2s}
+.ecard:hover{transform:translateY(-3px);border-color:var(--navy);box-shadow:10px 10px 0 var(--paper-deep)}
+.ecard-thumb{position:relative;aspect-ratio:16/9;background:#000;display:block;border-bottom:1.5px solid var(--rule);overflow:hidden}
+.ecard-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.ecard:hover .ecard-thumb img{transform:scale(1.04)}
+.ecard-no{position:absolute;top:10px;left:10px;background:var(--navy);color:var(--gold);font-family:'JetBrains Mono';font-weight:600;font-size:.58rem;letter-spacing:.1em;padding:5px 9px}
+.ecard-thumb .play{position:absolute;inset:0;display:grid;place-items:center}
+.ecard-thumb .play span{width:54px;height:54px;background:rgba(15,23,42,.82);border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:1rem;padding-left:3px;transition:.2s}
+.ecard:hover .play span{background:var(--clay);border-color:var(--paper-warm);color:var(--paper-warm)}
+.ecard-body{padding:18px 20px 18px;flex:1;display:flex;flex-direction:column}
+.ecard-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px}
+.ecard-tags span{font-family:'JetBrains Mono';font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay-deep);border:1px solid var(--rule);padding:4px 8px}
+.ecard-body h3{font-family:'Big Shoulders Display';font-weight:800;font-size:1.42rem;line-height:.96;text-transform:uppercase;letter-spacing:-.012em;color:var(--navy)}
+.ecard:hover .ecard-body h3{color:var(--clay)}
+.ecard-by{font-family:'JetBrains Mono';font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--rye);margin-top:9px}
+.ecard-log{display:block;color:var(--ink-soft);font-size:.88rem;line-height:1.45;font-weight:500;margin-top:11px}
+.ecard-cta{display:block;margin-top:auto;border-top:1.5px solid var(--rule);padding:13px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:var(--clay-deep);transition:background .2s,color .2s}
+.ecard:hover .ecard-cta{background:var(--clay-soft);color:var(--clay)}
+.ecards-more{text-align:center;margin-top:42px}
+@media(max-width:860px){.ecards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ecards{grid-template-columns:1fr}}
+
+/* BRAND BAND */
+.brandband{background:var(--paper-deep);padding:clamp(56px,8vw,104px) 0;border-block:1px solid var(--rule-soft)}
+.bb-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.bb-grid h2{font-family:'Big Shoulders Display';font-weight:900;font-size:clamp(30px,4.4vw,62px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--navy);margin-bottom:22px}
+.bb-grid h2 .accent{color:var(--clay)}
+.bb-grid p{color:var(--ink-soft);font-size:1.05rem;line-height:1.65;margin-bottom:1em;font-weight:400}
+.bb-grid p strong{color:var(--ink);font-weight:700}
+.bb-quote{background:var(--navy);color:var(--paper-warm);padding:clamp(32px,4vw,52px);position:relative}
+.bb-quote .mark{font-family:'Big Shoulders Display';font-size:90px;line-height:.5;color:var(--gold);font-weight:900;display:block;height:42px}
+.bb-quote blockquote{font-family:'Big Shoulders Display';font-weight:700;font-size:clamp(22px,2.7vw,34px);line-height:1.05;letter-spacing:-.01em;text-transform:uppercase;color:var(--paper-warm);margin:10px 0 18px}
+.bb-quote blockquote .accent{color:var(--gold)}
+.bb-quote .attr{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,239,226,.7)}
+@media(max-width:860px){.bb-grid{grid-template-columns:1fr;gap:32px}}
+
+/* BOOK */
+.book{background:var(--paper);padding:clamp(56px,8vw,96px) 0}
+.book-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(32px,5vw,60px);align-items:center}
+.book-grid img{width:clamp(150px,18vw,230px);filter:drop-shadow(0 24px 44px rgba(10,11,15,.35))}
+.book-grid h2{font-family:'Big Shoulders Display';font-weight:900;font-size:clamp(28px,4vw,54px);line-height:.94;letter-spacing:-.02em;text-transform:uppercase;color:var(--navy);margin-bottom:16px}
+.book-grid p{color:var(--ink-soft);font-weight:500;max-width:48ch;margin-bottom:18px}
+.book-badge{display:inline-block;background:var(--clay);color:var(--paper-warm);font-family:'JetBrains Mono';font-weight:600;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px}
+@media(max-width:620px){.book-grid{grid-template-columns:1fr;text-align:center}.book-grid img{margin:0 auto}}
+
+/* FOOTER */
+footer.foot{background:var(--navy);color:var(--paper-warm);padding:64px 0 48px}
+.foot-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.foot .brand .logo{background:var(--clay);color:var(--gold)}
+.foot .brand .name{color:var(--paper-warm)}
+.foot .brand .name em{color:var(--gold)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}
+.foot-links a{color:var(--gold)}
+.foot-meta{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.18em;color:rgba(245,239,226,.6);text-transform:uppercase;margin-top:14px}
+
+/* review banner */
+.review-flag{background:var(--clay-deep);color:var(--paper-warm);text-align:center;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px}
+</style>
+</head>
+<body>
+
+<div class="review-flag">Local review mockup · June 9 · homepage concept (podcast + work-with-ben). Coaching link opens the new coaching draft; episodes go to the live gallery.</div>
+
+<!-- NAV -->
+<nav class="top"><div class="wrap"><div class="nav-row">
+  <a href="index.html" class="brand"><span class="logo">M</span><span class="name">Max<em>Life</em></span></a>
+  <div class="nav-links">
+    <a href="https://maxlifebenlaws.com/episodes">MaxLife Podcast</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="https://www.youtube.com/@MaxLifeBenLaws" target="_blank" rel="noopener">YouTube</a>
+  </div>
+  <a href="coaching.html" class="nav-cta">Work with Ben</a>
+</div></div></nav>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <span class="eyebrow">Podcast & Private Coaching</span>
+    <h1>Max<em>Life</em></h1>
+    <div class="tagline">With Ben Laws</div>
+    <p class="sub">Founder, creative producer, and host of the MaxLife Podcast. Long-form conversations on building wealth, leading people, and living the life you're actually working for, plus private coaching for founders who've already won and feel the next chapter pulling. <strong>Two ways in.</strong></p>
+    <div class="hero-cta">
+      <a href="https://maxlifebenlaws.com/episodes" class="btn-primary">Listen to the Podcast</a>
+      <a href="coaching.html" class="btn-secondary">Work with Ben →</a>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <img src="https://maxlifebenlaws.com/ben-coaching/img/ben-photo.jpg" alt="Ben Laws" />
+    <span class="cap">Ben Laws · MaxLife</span>
+  </div>
+</div></div></section>
+
+<!-- TWO DOORS -->
+<section class="doors"><div class="wrap"><div class="doors-grid">
+  <a class="door" href="https://maxlifebenlaws.com/episodes">
+    <span class="k">For everyone</span>
+    <h2>The MaxLife <span class="accent">Podcast</span></h2>
+    <p>Long-form conversations with founders and operators. Watch the full episode, skim the quick hits, and print a free one-page reflection worksheet for each one. Collect the series.</p>
+    <span class="go">Browse all episodes →</span>
+  </a>
+  <a class="door" href="coaching.html">
+    <span class="k">For founders, by application</span>
+    <h2>Work with <span class="accent">Ben</span></h2>
+    <p>A private practice for founders running $5M–$50M companies. Not a coach in the way you're picturing. A creative producer who pulls the next chapter out of people who've already won.</p>
+    <span class="go">See the coaching practice →</span>
+  </a>
+</div></div></section>
+
+<!-- LATEST EPISODES -->
+<section class="episodes"><div class="wrap">
+  <div class="shead" style="margin-bottom:36px">
+    <span class="eyebrow">Latest from the show</span>
+    <h2>New <span class="accent">conversations</span></h2>
+  </div>
+  <div class="ecards">
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/the-fear-youre-avoiding-is-the-door">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/24WEd_3ICDI/hqdefault.jpg" alt=""><span class="ecard-no">No. 75</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>Fear</span><span>Anxiety</span></span><h3>The Fear You're Avoiding Is the Door</h3><span class="ecard-by">with Sahrit Weinstein</span><span class="ecard-log">The fear you keep dodging is pointing straight at the life you're meant to live.</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/the-risk-of-always-being-productive">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/w1rZiSTW_f8/hqdefault.jpg" alt=""><span class="ecard-no">No. 74</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>AI &amp; Work</span><span>Identity</span></span><h3>The Risk of Always Being Productive</h3><span class="ecard-by">with Marissa Brassfield</span><span class="ecard-log">If your worth is tied to what you produce, who are you when the work slows down?</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/the-entrepreneurs-hidden-battle">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/fHrJGnKB7xo/hqdefault.jpg" alt=""><span class="ecard-no">No. 73</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>Identity</span><span>Gratitude</span></span><h3>The Entrepreneur's Hidden Battle</h3><span class="ecard-by">with Kelly Knight, Chris Johnson, Dennis McIntee</span><span class="ecard-log">It can look incredible from the outside while something quieter falls apart inside.</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/the-truth-about-money-success-and-being-aligned">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/tz0yJQTRyS8/hqdefault.jpg" alt=""><span class="ecard-no">No. 72</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>Money Mindset</span><span>Alignment</span></span><h3>The Truth About Money, Success, and Being Aligned</h3><span class="ecard-by">with Jesse Mecham, Garrett Gunderson, Alex Bean</span><span class="ecard-log">Money doesn't fix you or break you. It amplifies whatever you already are.</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/who-you-are-changes-everything">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/p-ky243iOvY/hqdefault.jpg" alt=""><span class="ecard-no">No. 71</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>Identity</span><span>Adversity</span></span><h3>Who You Are Changes Everything</h3><span class="ecard-by">with Erik Solbakken, Gary Klaben, Ken Bogard</span><span class="ecard-log">You don't build a bigger life by doing more. You build it by becoming someone different.</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+    <a class="ecard" href="https://maxlifebenlaws.com/episodes/youre-not-stuck-youre-misaligned">
+      <span class="ecard-thumb"><img src="https://i.ytimg.com/vi/XxMaPMqoVLE/hqdefault.jpg" alt=""><span class="ecard-no">No. 70</span><span class="play"><span>▶</span></span></span>
+      <span class="ecard-body"><span class="ecard-tags"><span>Alignment</span><span>Belief</span></span><h3>You're Not Stuck, You're Misaligned</h3><span class="ecard-by">with Jerome Wade, Jason Henkel, Shannon Waller, Liz Hartke</span><span class="ecard-log">Stuck usually isn't a strategy problem. It's an alignment problem.</span></span>
+      <span class="ecard-cta">Show notes · Episode · Clips · Worksheet →</span>
+    </a>
+  </div>
+  <div class="ecards-more">
+    <a href="https://maxlifebenlaws.com/episodes" class="btn-primary">Browse all episodes →</a>
+  </div>
+</div></section>
+
+<!-- BRAND BAND -->
+<section class="brandband"><div class="wrap"><div class="bb-grid">
+  <div>
+    <span class="eyebrow">What Ben actually does</span>
+    <h2>Every entrepreneur or creator needs<br/>their <span class="accent">Rick Rubin.</span></h2>
+    <p>Artists hire Rubin for his ear, his taste, and his refusal to let them ship anything less than their best. Ben does that for founders. He creates the space where you feel genuinely seen, then paints the next chapter vividly enough that you can finally act on it.</p>
+    <p><strong>When you hire Ben, you don't get a framework. You get his nervous system.</strong> Yours already catches ideas and instinct. Plug into his and you see the moves sooner, confirm what your gut already knows, and borrow some of his to execute with more confidence, across all of it, not just the business.</p>
+    <p style="margin-top:8px"><a href="coaching.html" class="btn-secondary" style="padding-left:0">See how it works →</a></p>
+  </div>
+  <div class="bb-quote">
+    <span class="mark">"</span>
+    <blockquote>You already have the technical ability. What you're after now is <span class="accent">expression</span>, and the <span class="accent">expansion</span> that comes with it.</blockquote>
+    <div class="attr">— Ben Laws · MaxLife</div>
+  </div>
+</div></div></section>
+
+<!-- BOOK -->
+<section class="book"><div class="wrap"><div class="book-grid">
+  <img src="https://maxlifebenlaws.com/ben-coaching/img/book.png" alt="The MaxLife Playbook by Ben Laws" />
+  <div>
+    <span class="book-badge">Book Coming Soon</span>
+    <h2 style="margin-top:16px">The MaxLife <span class="accent">Playbook</span></h2>
+    <p>The frameworks Ben uses with founders, in one place. Aligned Fuel, the Third Freedom, the Sourdough Starter, the Five Dials. Join the list to know when it drops.</p>
+    <a href="https://maxlifebenlaws.com/episodes" class="btn-secondary" style="padding-left:0">Start with the podcast →</a>
+  </div>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="foot"><div class="wrap">
+  <div class="foot-row">
+    <a href="index.html" class="brand"><span class="logo">M</span><span class="name">Max<em>Life</em></span></a>
+    <div>
+      <div class="foot-links">
+        <a href="https://maxlifebenlaws.com/episodes">Podcast</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="https://www.youtube.com/@MaxLifeBenLaws" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <div class="foot-meta">© MaxLife · Ben Laws · Operated quietly since 2005</div>
+    </div>
+  </div>
+</div></footer>
+
+</body>
+</html>

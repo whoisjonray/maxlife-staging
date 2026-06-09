@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ben Laws · The Creative Producer for Founders | MaxLife</title>
+<meta name="description" content="Ben Laws is the creative producer for founders running $5M–$50M companies. Not a coach in the way you're picturing. Every founder needs their Rick Rubin: the person who pulls the next chapter out of people who've already won." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5EFE2;
+  --paper-deep:#EBE3D0;
+  --paper-warm:#FBF7ED;
+  --navy:#0F172A;
+  --navy-deep:#080D1A;
+  --gold:#D4A853;
+  --gold-light:#E5C679;
+  --gold-soft:#F4E6C0;
+  --clay:#B85932;
+  --clay-deep:#8A3F1E;
+  --clay-soft:#F3D6C4;
+  --sage:#6F7B5C;
+  --sage-deep:#525E40;
+  --sage-soft:#DDE2CC;
+  --ink:#0A0B0F;
+  --ink-soft:#2B2E36;
+  --rye:#5C5950;
+  --rule:rgba(10,11,15,.18);
+  --rule-soft:rgba(10,11,15,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--clay);text-decoration:none;transition:color .2s ease}
+a:hover{color:var(--clay-deep)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(24px,5vw,80px)}
+
+/* TYPOGRAPHY UTILITY */
+.display{
+  font-family:'Big Shoulders Display',Impact,sans-serif;
+  font-weight:900;letter-spacing:-.02em;
+  text-transform:uppercase;line-height:.88;
+}
+.eyebrow{
+  font-family:'Inter',sans-serif;font-weight:700;
+  font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);
+}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:500;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* ============================================ NAV */
+nav.top{
+  padding:18px 0;
+  position:sticky;top:0;background:rgba(245,239,226,.95);backdrop-filter:blur(10px);z-index:50;
+  border-bottom:1px solid var(--rule-soft);
+}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-links{display:flex;gap:26px;margin-left:auto;margin-right:28px}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rye);text-decoration:none}
+.nav-links a:hover{color:var(--clay)}
+@media(max-width:820px){.nav-links{display:none}}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo{
+  width:44px;height:44px;background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:22px;
+}
+.brand .name{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+.brand .name em{font-style:normal;color:var(--clay)}
+.nav-cta{
+  font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.01em;
+  padding:12px 24px;background:var(--navy);color:var(--paper);
+  transition:background .2s ease, transform .2s ease;
+}
+.nav-cta:hover{background:var(--clay);transform:translateY(-1px);color:var(--paper)}
+
+/* ============================================ HERO */
+section.hero{position:relative;padding:0;overflow:hidden;height:100vh;min-height:640px;max-height:900px}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1}
+.hero-overlay{
+  position:absolute;inset:0;z-index:2;
+  background:
+    linear-gradient(90deg, rgba(245,239,226,.95) 0%, rgba(245,239,226,.75) 42%, rgba(245,239,226,.22) 70%, rgba(245,239,226,0) 100%),
+    linear-gradient(180deg, rgba(245,239,226,.12) 0%, rgba(245,239,226,.4) 72%, var(--paper) 100%);
+}
+.hero-inner{
+  position:relative;z-index:3;height:100%;
+  display:flex;align-items:center;
+  padding:clamp(60px,9vw,120px) 0 clamp(40px,6vw,70px);
+}
+.hero-content{max-width:720px;position:relative;z-index:2}
+.hero-book{
+  position:absolute;right:clamp(24px,5vw,90px);top:50%;transform:translateY(-50%);
+  width:clamp(180px,22vw,340px);z-index:3;pointer-events:auto;
+  filter:drop-shadow(0 30px 60px rgba(10,11,15,.4)) drop-shadow(0 10px 20px rgba(10,11,15,.3));
+  transition:transform .35s ease;
+}
+.hero-book:hover{transform:translateY(-50%) scale(1.04)}
+.hero-book img{display:block;width:100%;height:auto}
+.hero-book .badge{
+  position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);
+  background:var(--clay);color:var(--paper-warm);
+  padding:8px 16px;font-family:'JetBrains Mono',monospace;font-weight:600;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;
+  box-shadow:0 6px 14px rgba(10,11,15,.2);
+}
+@media (max-width:980px){
+  .hero-book{
+    position:static;transform:none;
+    width:200px;margin:32px 0 40px;
+    align-self:flex-start;
+  }
+  .hero-book:hover{transform:scale(1.04)}
+  .hero-book .badge{bottom:-18px}
+}
+.hero-content .eyebrow{
+  display:inline-block;margin-bottom:18px;
+  padding:6px 12px;background:var(--navy);color:var(--gold);letter-spacing:.18em;font-size:.66rem;
+}
+.hero-content h1{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(42px,7.2vw,100px);line-height:.9;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);margin-bottom:18px;
+}
+.hero-content h1 .accent{color:var(--clay)}
+.hero-content .sub{
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:clamp(16px,1.7vw,21px);line-height:1.4;letter-spacing:-.003em;color:var(--ink);
+  max-width:44ch;margin-bottom:26px;text-shadow:0 1px 2px rgba(245,239,226,.55);
+}
+.hero-content .sub strong{font-weight:700;color:var(--ink)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-primary{
+  display:inline-block;padding:18px 36px;
+  font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.05em;text-transform:uppercase;
+  background:var(--navy);color:var(--paper);
+  transition:background .2s ease, transform .2s ease;
+}
+.btn-primary:hover{background:var(--clay);color:var(--paper);transform:translateY(-2px)}
+.btn-secondary{
+  display:inline-block;padding:18px 28px;
+  font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.05em;text-transform:uppercase;color:var(--navy);
+  border-bottom:2px solid var(--navy);transition:color .2s ease, border-color .2s ease;
+}
+.btn-secondary:hover{color:var(--clay);border-color:var(--clay)}
+
+/* ============================================ ANCHOR QUOTE */
+section.anchor{padding:clamp(80px,11vw,140px) 0;background:var(--paper);text-align:center}
+.anchor-q{max-width:1000px;margin:0 auto}
+.anchor-q .eyebrow{display:block;margin-bottom:36px;color:var(--rye)}
+.anchor-q p.q{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:600;
+  font-size:clamp(28px,4.5vw,68px);line-height:1.08;letter-spacing:-.018em;
+  text-transform:uppercase;color:var(--navy);max-width:1200px;margin:0 auto;
+}
+.anchor-q p.q .keep{white-space:nowrap}
+.anchor-q p.q .accent{color:var(--clay)}
+.anchor-q .attr{
+  margin-top:40px;font-family:'JetBrains Mono',monospace;font-weight:600;
+  font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rye);
+}
+
+/* ============================================ FREEDOMS INFOGRAPHIC */
+section.freedoms{padding:clamp(80px,11vw,140px) 0;background:var(--paper-deep);border-block:1px solid var(--rule-soft)}
+.freedoms-head{text-align:center;max-width:880px;margin:0 auto 72px}
+.freedoms-head .eyebrow{display:block;margin-bottom:24px}
+.freedoms-head h2{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(34px,5.6vw,90px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);
+}
+.freedoms-head h2 .accent{color:var(--clay)}
+.freedoms-head p{margin-top:22px;font-size:1.1rem;color:var(--ink-soft);max-width:56ch;margin-inline:auto;font-weight:500}
+.freedoms-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.freedom-stage{
+  padding:48px 36px;background:var(--paper-warm);
+  border:1.5px solid var(--rule);
+  position:relative;display:flex;flex-direction:column;
+}
+.freedom-stage:not(:last-child){border-right:0}
+.freedom-stage.from{background:#EFE6CF}
+.freedom-stage.to{background:var(--paper-warm)}
+.freedom-stage.through{background:var(--sage-soft);border-color:var(--sage-deep);border-width:2px}
+.freedom-stage .phase{
+  font-family:'JetBrains Mono',monospace;font-weight:600;
+  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rye);margin-bottom:18px;
+}
+.freedom-stage .word{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(48px,6.4vw,88px);line-height:.86;letter-spacing:-.025em;color:var(--navy);
+  margin-bottom:24px;text-transform:uppercase;
+}
+.freedom-stage .word .accent{color:var(--clay)}
+.freedom-stage.through .word .accent{color:var(--sage-deep)}
+.freedom-stage .meaning{font-size:1rem;line-height:1.5;color:var(--ink-soft);margin-bottom:24px;font-weight:500}
+.freedom-stage .examples{display:grid;gap:10px;margin-top:auto;padding-top:22px;border-top:1.5px solid var(--rule)}
+.freedom-stage .examples span{font-size:.9rem;color:var(--ink-soft);display:flex;gap:10px;line-height:1.4;font-weight:500}
+.freedom-stage .examples span::before{content:"→";color:var(--clay);font-weight:700;flex:none}
+.freedom-stage.through .examples span::before{color:var(--sage-deep)}
+.you-are-here{
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+  background:var(--navy);color:var(--gold);
+  padding:9px 22px;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:800;
+  font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;z-index:5;
+}
+
+/* ============================================ RECKONING */
+section.reckoning{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.section-head{margin-bottom:64px;max-width:920px}
+.section-head.center{text-align:center;margin-inline:auto}
+.section-head .eyebrow{display:block;margin-bottom:22px}
+.section-head h2{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(26px,4.4vw,72px);line-height:.96;letter-spacing:-.018em;
+  text-transform:uppercase;color:var(--navy);
+}
+.section-head h2 .accent{color:var(--clay)}
+.section-head p.intro{
+  font-family:'Inter',sans-serif;font-weight:500;
+  font-size:clamp(15px,1.6vw,19px);line-height:1.5;color:var(--ink-soft);
+  margin-top:22px;max-width:56ch;
+}
+.section-head.center p.intro{margin-inline:auto}
+
+.reckon-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1.5px solid var(--rule)}
+.reckon-card{
+  padding:32px 24px;border-right:1.5px solid var(--rule);background:var(--paper-warm);
+  display:flex;flex-direction:column;transition:background .25s ease, transform .25s ease;
+}
+.reckon-card:last-child{border-right:0}
+.reckon-card:hover{background:var(--clay-soft);transform:translateY(-3px)}
+.reckon-card .num{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:64px;line-height:.9;color:var(--clay);margin-bottom:24px;letter-spacing:-.02em;
+}
+.reckon-card .body{
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:1.04rem;line-height:1.4;color:var(--ink);
+}
+
+.reckon-prose{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:80px;max-width:1100px}
+.reckon-prose p{font-size:1.08rem;line-height:1.72;color:var(--ink-soft);margin-bottom:1em;font-weight:400}
+.reckon-prose p strong{color:var(--ink);font-weight:700}
+.reckon-prose .dropcap::first-letter{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  float:left;font-size:5.8rem;line-height:.8;padding:.06em .14em 0 0;color:var(--clay);letter-spacing:-.02em;
+}
+
+/* ============================================ PULL QUOTES */
+section.pullq{padding:clamp(80px,11vw,140px) 0;background:var(--navy);color:var(--paper-warm);position:relative}
+section.pullq.clay{background:var(--clay)}
+section.pullq.sage{background:var(--sage-deep)}
+.pullq-inner{max-width:1000px;margin:0 auto;text-align:center;padding-inline:24px}
+.pullq-inner .mark{font-family:'Big Shoulders Display',sans-serif;font-size:120px;line-height:.6;color:var(--gold);margin-bottom:0;display:block;font-weight:900}
+.pullq-inner p{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:clamp(27px,4.3vw,58px);line-height:1.04;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--paper-warm);
+}
+.pullq-inner p .accent{color:var(--gold)}
+.pullq.clay .pullq-inner p .accent{color:var(--paper)}
+.pullq-inner .attr{
+  margin-top:36px;font-family:'JetBrains Mono',monospace;font-weight:600;
+  font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,226,.7);
+}
+
+/* ============================================ LIFESTYLE BREAK */
+section.lifestyle-break{
+  height:clamp(360px,52vw,640px);
+  background-size:115% auto;background-position:center;background-repeat:no-repeat;
+  position:relative;display:flex;align-items:flex-end;overflow:hidden;
+}
+.lifestyle-break::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 25%, rgba(10,11,15,.45) 55%, rgba(10,11,15,.82) 100%)}
+.lifestyle-break .cap{position:relative;z-index:2;color:var(--paper-warm);padding:48px 36px;max-width:760px;text-shadow:0 2px 14px rgba(10,11,15,.7)}
+.lifestyle-break .cap .eyebrow{color:var(--gold);opacity:1}
+.lifestyle-break .cap h3{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(32px,4.6vw,68px);line-height:.96;letter-spacing:-.02em;
+  text-transform:uppercase;color:#FFFFFF;margin-top:16px;
+}
+.lifestyle-break .cap h3 .accent{color:var(--gold)}
+
+/* ============================================ PODCAST FEATURE */
+section.podcast{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.podcast-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.podcast-video{
+  position:relative;aspect-ratio:16/9;border:1.5px solid var(--navy);
+  background:var(--navy);overflow:hidden;
+  box-shadow:0 10px 40px rgba(10,11,15,.15);
+}
+.podcast-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.podcast-body .eyebrow{display:block;margin-bottom:18px}
+.podcast-body h2{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(34px,5vw,76px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);margin-bottom:24px;
+}
+.podcast-body h2 .accent{color:var(--clay)}
+.podcast-body p{font-size:1.06rem;line-height:1.65;color:var(--ink-soft);margin-bottom:1em;max-width:48ch;font-weight:400}
+.podcast-body p strong{color:var(--ink);font-weight:700}
+.podcast-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;align-items:center}
+.podcast-stats{display:flex;gap:32px;margin-top:32px;padding-top:24px;border-top:1.5px solid var(--rule);flex-wrap:wrap}
+.podcast-stat .n{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.6rem;color:var(--clay);line-height:1;letter-spacing:-.02em}
+.podcast-stat .l{margin-top:6px;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.62rem;letter-spacing:.18em;color:var(--rye);text-transform:uppercase}
+
+@media (max-width:980px){
+  .podcast-grid{grid-template-columns:1fr;gap:32px}
+}
+
+/* ============================================ TESTIMONIALS SLIDER */
+section.testimonials{padding:clamp(80px,11vw,140px) 0;background:var(--paper-deep);border-block:1px solid var(--rule-soft)}
+.testimonials .section-head{margin-bottom:48px}
+.slider-wrap{position:relative}
+.slider{
+  display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding:8px 4px 32px;
+  scroll-padding-left:4px;
+}
+.slider::-webkit-scrollbar{display:none}
+.testimonial{
+  flex:0 0 calc(50% - 12px);scroll-snap-align:start;
+  background:var(--paper-warm);border:1.5px solid var(--rule);
+  padding:48px 40px;position:relative;
+  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:340px;
+}
+.testimonial::before{
+  content:"\201C";
+  position:absolute;top:18px;left:32px;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:96px;line-height:.7;color:var(--clay);opacity:.85;
+}
+.testimonial .quote{
+  font-family:'Inter',sans-serif;font-weight:500;
+  font-size:clamp(17px,1.7vw,21px);line-height:1.55;color:var(--ink);
+  letter-spacing:-.005em;margin-top:48px;
+}
+.testimonial .quote strong{font-weight:700;color:var(--navy)}
+.testimonial .attr{
+  margin-top:32px;padding-top:24px;border-top:1.5px solid var(--rule);
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+}
+.testimonial .attr .who{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:800;
+  font-size:1.05rem;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;
+}
+.testimonial .attr .ctx{
+  font-family:'JetBrains Mono',monospace;font-weight:500;
+  font-size:.62rem;letter-spacing:.18em;color:var(--rye);text-transform:uppercase;text-align:right;
+}
+.slider-nav{display:flex;gap:14px;align-items:center;margin-top:8px}
+.slider-btn{
+  width:48px;height:48px;border:1.5px solid var(--navy);background:transparent;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;font-size:1.4rem;
+  transition:background .2s ease, color .2s ease;
+}
+.slider-btn:hover{background:var(--navy);color:var(--paper)}
+.slider-btn:disabled{opacity:.3;cursor:not-allowed}
+.slider-meta{
+  margin-left:auto;font-family:'JetBrains Mono',monospace;font-weight:500;
+  font-size:.66rem;letter-spacing:.2em;color:var(--rye);text-transform:uppercase;
+}
+
+@media (max-width:980px){
+  .testimonial{flex:0 0 calc(100% - 8px);min-height:auto;padding:36px 28px}
+}
+
+/* ============================================ COACH */
+section.coach{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.coach-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.coach-portrait{
+  position:relative;border:1.5px solid var(--rule);padding:14px 14px 78px;background:var(--paper-warm);
+  box-shadow:0 4px 24px rgba(10,11,15,.08);
+}
+.coach-portrait img{width:100%;aspect-ratio:1;object-fit:cover;display:block;filter:saturate(.95) contrast(1.04)}
+.coach-portrait .caption{position:absolute;bottom:22px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.coach-portrait .caption .name{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.5rem;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.coach-portrait .caption .meta{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.62rem;letter-spacing:.18em;color:var(--rye);text-transform:uppercase}
+
+.coach-body .eyebrow{display:block;margin-bottom:22px}
+.coach-body h2{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(31px,4.5vw,76px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);margin-bottom:28px;
+}
+.coach-body h2 .accent{color:var(--clay)}
+.coach-body h2 .l1{color:#0F172A}
+.coach-body h2 .l2{color:#334155}
+.coach-body h2 .l3{color:#525E40}
+.coach-body h2 .l4{color:#475569}
+.coach-body .lead{
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:clamp(20px,2.2vw,28px);line-height:1.34;color:var(--ink);
+  margin-bottom:28px;letter-spacing:-.008em;
+}
+.coach-body p{font-size:1.06rem;line-height:1.7;color:var(--ink-soft);margin-bottom:1em;font-weight:400}
+.coach-body p strong{color:var(--ink);font-weight:700}
+.coach-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:2px solid var(--navy)}
+.coach-stat{padding:26px 16px 0;border-right:1.5px solid var(--rule)}
+.coach-stat:last-child{border-right:0}
+.coach-stat .n{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(46px,5vw,72px);line-height:.9;color:var(--clay);letter-spacing:-.025em;
+}
+.coach-stat .l{margin-top:10px;font-size:.88rem;color:var(--ink-soft);line-height:1.4;font-weight:500}
+
+/* ============================================ METHODOLOGY */
+section.method{padding:clamp(80px,11vw,140px) 0;background:var(--paper-deep)}
+.framework-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--rule)}
+.framework{
+  background:var(--paper-warm);padding:40px 30px;border-right:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);
+  display:flex;flex-direction:column;transition:background .25s ease;
+}
+.framework:nth-child(3n){border-right:0}
+.framework:nth-last-child(-n+3){border-bottom:0}
+.framework:hover{background:var(--clay-soft)}
+.framework .roman{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:64px;color:var(--clay);line-height:.9;letter-spacing:-.03em;margin-bottom:22px;
+}
+.framework h4{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.7rem;line-height:1.04;
+  color:var(--navy);margin-bottom:16px;letter-spacing:-.014em;text-transform:uppercase;
+}
+.framework p{font-size:1rem;line-height:1.56;color:var(--ink-soft);margin-bottom:0;font-weight:400}
+.framework .tag{
+  margin-top:26px;font-family:'JetBrains Mono',monospace;font-weight:600;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);
+}
+
+/* ============================================ QUALIFY */
+section.qualify{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.qualify-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.qualify-col{padding:0 0 40px;background:var(--paper-warm);border:1.5px solid var(--rule);position:relative;overflow:hidden}
+.qualify-col.no{background:#F0EBDC}
+.qualify-stamp{
+  padding:18px 32px;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:1.4rem;text-transform:uppercase;letter-spacing:.04em;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  margin-bottom:36px;
+}
+.qualify-col.yes .qualify-stamp{background:var(--sage-deep);color:var(--paper-warm)}
+.qualify-col.no .qualify-stamp{background:var(--rye);color:var(--paper-warm)}
+.qualify-stamp .icon{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--paper-warm);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;line-height:1;flex:none;
+}
+.qualify-col.yes .qualify-stamp .icon{color:var(--sage-deep)}
+.qualify-col.no .qualify-stamp .icon{color:var(--rye)}
+.qualify-stamp .label-text{flex:1}
+.qualify-body{padding:0 32px}
+.qualify-col h3{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(30px,4vw,52px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);margin-bottom:28px;
+}
+.qualify-col h3 .accent{color:var(--sage-deep)}
+.qualify-col.no h3 .accent{color:var(--rye)}
+.qualify-list{list-style:none;padding:0;display:grid;gap:14px}
+.qualify-list li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;font-size:1rem;line-height:1.52;color:var(--ink-soft);font-weight:500}
+.qualify-list li .glyph{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.6rem;color:var(--sage-deep);line-height:1}
+.qualify-col.no .qualify-list li .glyph{color:var(--rye)}
+
+/* ============================================ ENGAGEMENT */
+section.engage{padding:clamp(80px,11vw,140px) 0;background:var(--paper-deep)}
+.cadence{margin-top:48px;background:var(--paper-warm);border:1.5px solid var(--rule);padding:48px 40px}
+.cadence-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.cadence-head .label{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy);text-transform:uppercase;letter-spacing:-.01em}
+.cadence-head .meta{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.72rem;letter-spacing:.22em;color:var(--rye);text-transform:uppercase}
+.cadence-row{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin-bottom:36px}
+.month{aspect-ratio:1/2;background:#EEE5D0;border:1.5px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:8px 6px;position:relative}
+.month .m{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rye);font-weight:600}
+.month .ev{display:flex;flex-direction:column;gap:3px;margin-top:auto}
+.month .ev .call{height:6px;background:var(--clay)}
+.month .ev .retreat{height:22px;background:var(--sage-deep);display:flex;align-items:center;justify-content:center;color:var(--paper-warm);font-family:'JetBrains Mono',monospace;font-size:.5rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.month .ev .deepdive{height:16px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:.48rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.month .ev .voice{height:3px;background:var(--clay-soft)}
+.cadence-legend{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;border-top:1.5px solid var(--rule)}
+.cadence-legend .item{display:flex;align-items:center;gap:10px;font-size:.94rem;color:var(--ink-soft);font-weight:500}
+.cadence-legend .swatch{width:20px;height:10px}
+.cadence-legend .swatch.call{background:var(--clay)}
+.cadence-legend .swatch.retreat{background:var(--sage-deep)}
+.cadence-legend .swatch.deepdive{background:var(--navy)}
+.cadence-legend .swatch.voice{background:var(--clay-soft)}
+
+.engage-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.engage-card{background:var(--paper-warm);border:1.5px solid var(--rule);padding:32px 28px}
+.engage-card .k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.66rem;letter-spacing:.22em;color:var(--clay);text-transform:uppercase;margin-bottom:18px}
+.engage-card .v{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.8rem;line-height:1;color:var(--navy);margin-bottom:14px;text-transform:uppercase;letter-spacing:-.014em}
+.engage-card .v .accent{color:var(--clay)}
+.engage-card .desc{font-size:.98rem;line-height:1.56;color:var(--ink-soft);font-weight:500}
+
+.invest-banner{
+  margin-top:56px;background:var(--navy);color:var(--paper-warm);
+  padding:56px 56px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+}
+.invest-banner .k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.7rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+.invest-banner .v{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(36px,5vw,68px);line-height:.96;text-transform:uppercase;color:var(--paper-warm);letter-spacing:-.024em}
+.invest-banner .v .accent{color:var(--gold)}
+.invest-banner .lead{font-family:'Inter',sans-serif;font-weight:500;font-size:clamp(17px,1.8vw,22px);line-height:1.42;color:var(--paper-warm);margin-top:20px;max-width:48ch;letter-spacing:-.003em}
+.invest-banner .lead .accent{color:var(--gold);font-weight:600}
+.invest-banner .small{font-size:.92rem;color:rgba(245,239,226,.65);margin-top:18px;max-width:54ch;line-height:1.5;font-weight:500}
+.invest-banner .btn-primary{background:var(--gold);color:var(--navy)}
+.invest-banner .btn-primary:hover{background:var(--paper);color:var(--navy)}
+
+/* ============================================ APPLY */
+section.apply{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.apply-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.apply-intro h2{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(34px,4.9vw,78px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--navy);margin-bottom:24px;
+}
+.apply-intro h2 .accent{color:var(--clay)}
+.apply-intro p{font-size:1.06rem;line-height:1.65;color:var(--ink-soft);margin-bottom:1em;max-width:48ch;font-weight:400}
+.apply-intro p strong{color:var(--ink);font-weight:700}
+.apply-process{margin-top:36px;display:grid;border-top:2px solid var(--navy)}
+.process-step{display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start;padding:18px 0;border-bottom:1px solid var(--rule-soft)}
+.process-step .n{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.74rem;letter-spacing:.18em;color:var(--clay);padding-top:6px}
+.process-step .what{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.4rem;color:var(--navy);text-transform:uppercase;letter-spacing:.005em}
+.process-step .desc{font-size:.92rem;color:var(--ink-soft);margin-top:4px;grid-column:2;line-height:1.5;font-weight:500}
+
+.apply-form{background:var(--paper-warm);border:1.5px solid var(--rule);padding:44px 40px;position:relative}
+.apply-form::before{content:"";position:absolute;top:-1.5px;left:-1.5px;right:-1.5px;height:5px;background:var(--clay)}
+.apply-form h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:2rem;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:-.012em}
+.apply-form .hint{font-size:.92rem;color:var(--ink-soft);margin-bottom:30px;font-weight:500}
+.field{margin-bottom:22px}
+.field label{display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.64rem;letter-spacing:.22em;color:var(--navy);text-transform:uppercase;margin-bottom:10px}
+.field input, .field select, .field textarea{
+  width:100%;padding:14px 16px;background:var(--paper);border:1.5px solid var(--rule);color:var(--ink);
+  font-family:'Inter',sans-serif;font-size:1rem;font-weight:500;
+  transition:border-color .2s ease, background .2s ease;
+}
+.field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--clay);background:var(--paper-warm)}
+.field textarea{min-height:108px;resize:vertical;line-height:1.5}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.submit{
+  width:100%;padding:20px 24px;
+  font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--navy);color:var(--paper);border:0;cursor:pointer;
+  transition:background .2s ease, transform .2s ease;margin-top:12px;
+}
+.submit:hover{background:var(--clay);transform:translateY(-2px)}
+.disclaim{margin-top:18px;font-size:.82rem;color:var(--rye);line-height:1.5;text-align:center;font-weight:500}
+
+/* ============================================ FOOTER */
+footer.foot{background:var(--navy);color:var(--paper-warm);padding:64px 0 48px}
+.foot-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.foot .brand .logo{background:var(--clay);color:var(--gold)}
+.foot .brand .name{color:var(--paper-warm)}
+.foot .brand .name em{color:var(--gold)}
+.foot-meta{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.22em;color:rgba(245,239,226,.7);text-transform:uppercase;font-weight:500;text-align:right;line-height:2}
+.foot-meta a{color:var(--gold)}
+.foot-meta a:hover{color:var(--paper)}
+
+/* MOTION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease, transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  /* HERO: become column layout, allow auto height for content+book */
+  section.hero{height:auto;min-height:100vh;max-height:none}
+  .hero-inner{flex-direction:column;align-items:flex-start;padding:90px 0 60px}
+  .hero-content{max-width:100%}
+  .hero-content h1{font-size:clamp(48px,11vw,80px);margin-bottom:18px}
+  .hero-content .sub{font-size:clamp(16px,3.6vw,20px);color:var(--ink);font-weight:500;max-width:100%;margin-bottom:26px}
+  .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:340px}
+  .hero-cta .btn-primary{text-align:center}
+  .hero-cta .btn-secondary{text-align:left;padding:14px 0}
+
+  .freedoms-row{grid-template-columns:1fr;gap:6px}
+  .freedom-stage:not(:last-child){border-right:1.5px solid var(--rule)}
+  .you-are-here{left:auto;right:24px;transform:none}
+  .reckon-grid{grid-template-columns:1fr 1fr;gap:0}
+  .reckon-card{border-right:0;border:0;border-bottom:1.5px solid var(--rule);padding:28px 22px}
+  .reckon-prose{grid-template-columns:1fr;gap:24px}
+  .coach-grid{grid-template-columns:1fr;gap:40px}
+  .coach-portrait{max-width:460px;margin:0 auto}
+  .coach-stats{grid-template-columns:1fr 1fr}
+  .coach-stat:nth-child(2){border-right:0}
+  .coach-stat:nth-child(3){grid-column:1/-1;border-right:0;border-top:1.5px solid var(--rule);margin-top:14px;padding-top:24px}
+  .framework-grid{grid-template-columns:1fr 1fr}
+  .framework{border-right:0!important;border-bottom:1.5px solid var(--rule)!important;padding:32px 24px}
+  .qualify-grid{grid-template-columns:1fr;gap:18px}
+  .qualify-stamp{padding:14px 24px;font-size:1.15rem}
+  .qualify-body{padding:0 28px}
+  .cadence-row{grid-template-columns:repeat(6,1fr)}
+  .engage-cards{grid-template-columns:1fr;gap:14px}
+  .invest-banner{grid-template-columns:1fr;gap:18px;padding:40px 32px}
+  .apply-grid{grid-template-columns:1fr;gap:40px}
+  .apply-form{padding:32px 26px}
+  .podcast-grid{grid-template-columns:1fr;gap:32px}
+
+  /* TESTIMONIALS — full-width per slide on mobile, larger touch area */
+  .testimonial{flex:0 0 calc(100% - 8px);min-height:auto;padding:36px 28px}
+  .testimonial .quote{font-size:1rem}
+  .slider-btn{width:52px;height:52px}
+
+  /* LIFESTYLE BREAK — readable captions */
+  .lifestyle-break{height:clamp(280px,80vw,480px)}
+  .lifestyle-break .cap{padding:28px 24px}
+  .lifestyle-break .cap h3{font-size:clamp(24px,5.6vw,40px)}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:22px}
+  .reckon-grid{grid-template-columns:1fr}
+  .framework-grid{grid-template-columns:1fr}
+  .cadence{padding:32px 22px}
+  .cadence-row{grid-template-columns:repeat(4,1fr);gap:4px}
+  .cadence-head{grid-template-columns:1fr;gap:8px}
+  .cadence-legend{gap:14px}
+  .cadence-legend .item{font-size:.86rem}
+  .field-row{grid-template-columns:1fr}
+  .foot-row{flex-direction:column;align-items:flex-start;gap:18px}
+  .foot-meta{text-align:left}
+  .coach-stats{grid-template-columns:1fr 1fr}
+  .coach-stat{padding:18px 14px 0}
+  .coach-stat:nth-child(3){grid-column:1/-1}
+  .nav-row .nav-cta{padding:10px 18px;font-size:.84rem}
+  .anchor-q p.q{font-size:clamp(24px,6vw,40px)}
+  .invest-banner{padding:32px 24px}
+  .invest-banner .v{font-size:clamp(28px,8vw,40px)}
+  .testimonial{padding:32px 22px}
+  .testimonial::before{font-size:72px;top:14px;left:22px}
+  .testimonial .quote{margin-top:36px}
+  .freedom-stage{padding:32px 24px}
+  .freedom-stage .word{font-size:clamp(40px,12vw,56px)}
+  .lifestyle-break{height:clamp(260px,90vw,420px)}
+  .lifestyle-break .cap h3{font-size:clamp(22px,6vw,32px)}
+  .podcast-stats{gap:18px}
+}
+
+/* ============================================ HOW I WORK (UA habits) */
+section.howiwork{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.habits-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1.5px solid var(--rule);margin-top:8px}
+.habit{padding:34px 26px;background:var(--paper-warm);border-right:1.5px solid var(--rule);display:flex;flex-direction:column;transition:background .25s ease}
+.habit:last-child{border-right:0}
+.habit:hover{background:var(--clay-soft)}
+.habit .hn{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:48px;line-height:.82;color:var(--clay);letter-spacing:-.02em;margin-bottom:18px}
+.habit h4{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.32rem;line-height:1;text-transform:uppercase;letter-spacing:-.012em;color:var(--navy);margin-bottom:13px}
+.habit p{font-size:.92rem;line-height:1.5;color:var(--ink-soft);font-weight:500;margin:0}
+@media(max-width:980px){.habits-grid{grid-template-columns:1fr 1fr}.habit{border-right:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule)}}
+@media(max-width:560px){.habits-grid{grid-template-columns:1fr}.habit{border-right:0}}
+.wiring{margin-top:40px;border:1.5px solid var(--rule);background:var(--navy);padding:32px clamp(24px,3vw,40px)}
+.wiring .lead{font-family:'Inter',sans-serif;font-weight:500;font-size:.96rem;color:rgba(245,239,226,.8);max-width:62ch;margin-bottom:26px}
+.wiring .lead .accent{color:var(--gold)}
+.wiring-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(245,239,226,.16)}
+.wcell{padding:22px 22px 0;border-right:1px solid rgba(245,239,226,.16);display:flex;flex-direction:column;gap:9px}
+.wcell:last-child{border-right:0}
+.wcell .wk{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.wcell .wv{font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;line-height:1.4;color:var(--paper-warm)}
+.wcell .wv small{display:block;font-weight:500;font-size:.78rem;color:rgba(245,239,226,.6);margin-top:3px}
+@media(max-width:760px){.wiring-grid{grid-template-columns:1fr 1fr}.wcell{border-bottom:1px solid rgba(245,239,226,.16);padding-bottom:20px}.wcell:nth-child(2n){border-right:0}}
+@media(max-width:460px){.wiring-grid{grid-template-columns:1fr}.wcell{border-right:0}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="/" class="brand" style="text-decoration:none">
+        <span class="logo">M</span>
+        <span class="name">Max<em>Life</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="/episodes">MaxLife Podcast</a>
+        <a href="https://www.youtube.com/@MaxLifeBenLaws" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <a href="#apply" class="nav-cta">Apply</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://maxlifebenlaws.com/ben-coaching/img/hero.png" alt="" class="hero-image" />
+  <div class="hero-overlay"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Creative Producer for Founders · By Application</span>
+        <h1>You<br/>arrived.<br/><span class="accent">Now what?</span></h1>
+        <p class="sub">A private practice for founders running <strong>$5M – $50M companies</strong> who've won by every external measure and quietly suspect the next chapter is bigger than the last one. Think creative producer, not coach.</p>
+        <div class="hero-cta">
+          <a href="#apply" class="btn-primary">Apply for a Fit Call</a>
+          <span class="btn-secondary" id="bookCta">Book Coming Soon</span>
+        </div>
+      </div>
+      <div class="hero-book" aria-label="Book Coming Soon" id="bookHero">
+        <img src="https://maxlifebenlaws.com/ben-coaching/img/book.png" alt="The MaxLife Playbook by Ben Laws" />
+        <span class="badge">Book Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE CALLS THAT MOVE MILLIONS (decisions) -->
+<section class="engage">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Calls That Move Millions</span>
+      <h2>Your best decisions move millions.<br/><span class="accent">So do your mistakes.</span></h2>
+      <p class="intro">At your level the hard part isn't working harder. It's the forks: the exit, the big bet, the partner, the price. The calls where being right makes millions and being wrong costs the same. You don't need more information. You need to collapse the timeline, confirm your own read, and act with conviction instead of circling the decision for months.</p>
+    </div>
+    <div class="engage-cards">
+      <div class="engage-card reveal"><div class="k">Sooner</div><div class="v">See the move<br/><span class="accent">from the balcony</span></div><div class="desc">The next move gets obvious the second you step off the ground and up to the balcony. We get you there faster than you'd climb alone, with someone who has no stake in the old version of you.</div></div>
+      <div class="engage-card reveal"><div class="k">Collapse</div><div class="v">Months of circling<br/><span class="accent">into one decision</span></div><div class="desc">Most of these calls don't need more analysis. They need you to decide. You've already made the down payment on the win, so the only question left is when you take delivery.</div></div>
+      <div class="engage-card reveal"><div class="k">Trust</div><div class="v">Your own<br/><span class="accent">knowing</span></div><div class="desc">You already know more than you let yourself act on. We sharpen that instinct and confirm it, so you move on your own read with conviction instead of second-guessing it.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONING: CREATIVE PRODUCER -->
+<section class="reckoning" style="padding-bottom:clamp(60px,8vw,100px)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What I Actually Do</span>
+      <h2>Not a coach.<br/>A <span class="accent">creative producer.</span></h2>
+      <p class="intro">If you know Rick Rubin, you already understand the job. Artists hire him for his ear, his taste, and his refusal to let them ship anything less than their best work. I do that for entrepreneurs.</p>
+    </div>
+    <div class="reckon-prose reveal">
+      <div>
+        <p class="dropcap">A creative producer holds the big vision and pulls the best version of it out of the people in the room. I create a space where you feel genuinely seen, then help you cut through the noise to the few things that actually matter. Not by handing you a framework. By helping you see the next move sooner, and putting clear words to what your gut already knows.</p>
+        <p>You already have the technical ability. The business already hums. This is work for people whose best decisions move markets by millions, and whose mistakes do the same. At that level you don't need another operator's playbook. You need clear expression, and the expansion that comes with it: the next chapter, painted vividly enough that you can finally see it, believe it, and build it.</p>
+      </div>
+      <div>
+        <p><strong>When you hire me, you don't get a framework. You get my nervous system.</strong></p>
+        <p>Your nervous system is already a satellite dish, tuned to ideas, instinct, and the occasional bolt of lightning. Mine adds surface area to yours. Plug in and you see the moves sooner, confirm the instincts you already trust, and borrow some of mine to execute faster and with more confidence. Not just on the business. On all of it: the work, the marriage, the health, the legacy you're actually building.</p>
+        <p>People call it coaching because there isn't a better word yet. What they're really paying for is taste, judgment, and trust. The thing money can't buy, except by hiring someone who already has it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BREAK 1: porch -->
+<section class="lifestyle-break" style="background-image:url('https://maxlifebenlaws.com/ben-coaching/img/porch.png')">
+  <div class="wrap">
+    <div class="cap reveal">
+      <span class="eyebrow">The view nobody warns you about</span>
+      <h3>You built the porch. The view is real.<br/><span class="accent">But something else is ready to come through.</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- THREE FREEDOMS -->
+<section class="freedoms" id="freedoms">
+  <div class="wrap">
+    <div class="freedoms-head reveal">
+      <span class="eyebrow">The Map</span>
+      <h2>The Third Freedom.<br/><span class="accent">Most founders get stuck between two and three.</span></h2>
+      <p>Almost every founder I work with has crushed the first two. The third one is what nobody talks about. It's also where the next decade actually lives.</p>
+    </div>
+
+    <div class="freedoms-row reveal">
+      <div class="freedom-stage from">
+        <span class="phase">Phase One</span>
+        <div class="word">Freedom<br/><span class="accent">From</span></div>
+        <p class="meaning">Escape. Getting out from under the boss, the financial stress, the version of life you didn't choose.</p>
+        <div class="examples">
+          <span>The job you hated</span>
+          <span>Paycheck to paycheck</span>
+          <span>Someone else's vision</span>
+        </div>
+      </div>
+      <div class="freedom-stage to">
+        <span class="phase">Phase Two</span>
+        <div class="word">Freedom<br/><span class="accent">To</span></div>
+        <p class="meaning">Building. The business, the income, the lifestyle. By every external measure, you've won.</p>
+        <div class="examples">
+          <span>The company you built</span>
+          <span>The home you own</span>
+          <span>The calendar you control</span>
+        </div>
+      </div>
+      <div class="freedom-stage through">
+        <span class="you-are-here">Where the work begins</span>
+        <span class="phase">Phase Three</span>
+        <div class="word">Freedom<br/><span class="accent">Through</span></div>
+        <p class="meaning">Alignment. Life happening through you, not just to you or for you. Ambition, family, health, capital all moving the same direction.</p>
+        <div class="examples">
+          <span>The next chapter you can finally see</span>
+          <span>The marriage you're still building</span>
+          <span>Ambition that pulls, not pushes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT'S ACTUALLY FOR (marriage + purpose) -->
+<section class="reckoning">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What It's Actually For</span>
+      <h2>The win means nothing<br/>if you lose the <span class="accent">house it was for.</span></h2>
+      <p class="intro">Most consulting stops at the business. The restlessness you're feeling usually isn't about the business at all.</p>
+    </div>
+    <div class="reckon-prose reveal">
+      <div>
+        <p class="dropcap">Most consultants treat your marriage and your kids as the thing you sacrifice for the company. I treat them as the whole reason we do any of this. If you're going to bring the hard stuff home, you've got to bring the cake too, not just the stress. We build a life where your ambition and your family pull the same direction instead of fighting each other.</p>
+        <p>The real scoreboard was never the exit. It's whether the person you married has real freedom, whether your kids know what they're here for, and whether you're climbing with the people you love instead of clawing over them.</p>
+      </div>
+      <div>
+        <p>Underneath all of it is the quieter question. The restlessness isn't a strategy problem. It's a meaning problem. Somewhere back there it stopped being "what's next for the business" and became <strong>"what is all of this actually for?"</strong></p>
+        <p>This is the work of getting honest about what you were built for, what you'll be proud of when you're eighty, and then pointing your ambition, your money, and your time straight at it. Not someday. Now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BREAK 2: car -->
+<section class="lifestyle-break" style="background-image:url('https://maxlifebenlaws.com/ben-coaching/img/car.png')">
+  <div class="wrap">
+    <div class="cap reveal">
+      <span class="eyebrow">The badge you don't wear</span>
+      <h3>You got everything you chased.<br/><span class="accent">So why does it feel unfinished?</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- RECKONING -->
+<section class="reckoning">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Reckoning</span>
+      <h2>You finished the race.<br/>And realized it wasn't<br/><span class="accent">the right one.</span></h2>
+      <p class="intro">Five sentences that have shown up in almost every first call.<br/>Pick whichever ones land.</p>
+    </div>
+
+    <div class="reckon-grid reveal">
+      <div class="reckon-card"><div class="num">I.</div><p class="body">The business runs itself and you feel less alive than when it was on fire.</p></div>
+      <div class="reckon-card"><div class="num">II.</div><p class="body">You hit the target you set five years ago and barely felt it land.</p></div>
+      <div class="reckon-card"><div class="num">III.</div><p class="body">Your spouse stopped asking about work. The answer is always the same.</p></div>
+      <div class="reckon-card"><div class="num">IV.</div><p class="body">You're calling slowing down "contentment." A quieter voice is calling it retreat.</p></div>
+      <div class="reckon-card"><div class="num">V.</div><p class="body">You've outgrown the mentors who taught you how to climb.</p></div>
+    </div>
+
+    <div class="reckon-prose reveal">
+      <div>
+        <p class="dropcap">Most founders don't notice it at first. The business runs, the team shows up, the deposit hits. By every external measure, you're winning. But on the drive home you wonder when a Monday last felt alive, not just disciplined.</p>
+        <p><strong>You're not ungrateful. You're human, and you're built for more.</strong></p>
+      </div>
+      <div>
+        <p>That restlessness isn't a problem to manage. It's ambition pointing at a bigger game, the one with your name on it that you haven't let yourself name yet.</p>
+        <p><strong>It isn't the end of your drive. It's the doorway to the biggest thing you'll ever build.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE 1 -->
+<section class="pullq">
+  <div class="pullq-inner reveal">
+    <span class="mark">"</span>
+    <p>It's not a strategy problem.<br/>It's not a productivity problem.<br/><span class="accent">It's a fuel problem.</span><br/>And you can't out-execute a fuel problem.</p>
+    <p class="attr">— Ben Laws</p>
+  </div>
+</section>
+
+<!-- LIFESTYLE BREAK 3: library -->
+<section class="lifestyle-break" style="background-image:url('https://maxlifebenlaws.com/ben-coaching/img/library.png')">
+  <div class="wrap">
+    <div class="cap reveal">
+      <span class="eyebrow">Where the real work happens</span>
+      <h3>Quiet hours.<br/><span class="accent">Honest questions.</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach">
+  <div class="wrap">
+    <div class="coach-grid">
+      <div class="coach-portrait reveal">
+        <img src="https://maxlifebenlaws.com/ben-coaching/img/ben-photo.jpg" alt="Ben Laws" />
+        <div class="caption">
+          <span class="name">Ben Laws</span>
+          <span class="meta">EST. 2005 · FIVE CO.</span>
+        </div>
+      </div>
+      <div class="coach-body reveal">
+        <span class="eyebrow">Meet Your Producer</span>
+        <h2><span class="l1">Built 5 companies.</span><br/><span class="l2">Produced 320+ entrepreneurs.</span><br/><span class="l3">$400M under mgmt.</span><br/><span class="accent">Stayed married</span><br/><span class="accent">through all of it.</span></h2>
+        <p class="lead">Most coaches teach what they read. Ben helps you move on what you can already feel coming. The difference is felt within five minutes of sitting across from him.</p>
+        <p>He works like a conductor. You bring the instruments. He hears the music that's actually trying to come through, then brings the room into a harmony that has people asking what just happened.</p>
+        <p>Ben has built five businesses from the inside, including a wealth management firm he's still running today. He's been the founder who couldn't sleep and the leader who caught the dilution in his own company's culture three years too late. His practice runs almost entirely on referral. Entrepreneurs introduce him to other entrepreneurs.</p>
+        <p>If you've spent time in the high-end founder world, you've heard his frameworks quoted by people who learned them from him. <strong>Aligned Fuel. The Third Freedom. Pull vs. Push. The Sourdough Starter. The Five Dials.</strong></p>
+
+        <div class="coach-stats">
+          <div class="coach-stat"><div class="n">5</div><div class="l">Companies founded across wealth, hospitality, coaching</div></div>
+          <div class="coach-stat"><div class="n">320+</div><div class="l">Entrepreneurs coached across two decades</div></div>
+          <div class="coach-stat"><div class="n">$400M</div><div class="l">Under management at Evexia Wealth</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK (UA) -->
+<section class="howiwork">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How I Work</span>
+      <h2>What it looks like<br/><span class="accent">when I'm at my best.</span></h2>
+      <p class="intro">Five things I do in the room, whether we're on a call or two days into an intensive.</p>
+    </div>
+    <div class="habits-grid reveal">
+      <div class="habit"><div class="hn">1</div><h4>A Safe Space for the Truth</h4><p>I create the room where the real thing finally gets said. Vulnerability is where accountability meets kind honesty, and it's where the aha lives.</p></div>
+      <div class="habit"><div class="hn">2</div><h4>Lead You to Your Own Yes</h4><p>Most of the work is finding what's standing in the way of your yes, then clearing it so momentum can start pulling you forward.</p></div>
+      <div class="habit"><div class="hn">3</div><h4>Make It an Experience</h4><p>We don't just talk. I build the in-the-pocket moments where you feel yourself actually living, not just busy being alive.</p></div>
+      <div class="habit"><div class="hn">4</div><h4>The Artistry of Future</h4><p>I don't live in a "no" world. I see the possibilities that don't exist yet, imagine the brushstrokes, and start painting before it has words.</p></div>
+      <div class="habit"><div class="hn">5</div><h4>Paint It With Words</h4><p>When you can finally see the picture, you believe it. And when you believe it, it becomes real.</p></div>
+    </div>
+
+    <div class="wiring reveal">
+      <p class="lead">The work is intuitive. It isn't random. For the founders who like the receipts, here's the objective read on how I'm <span class="accent">wired</span>.</p>
+      <div class="wiring-grid">
+        <div class="wcell"><span class="wk">Kolbe A</span><span class="wv">4 · 2 · 9 · 4<small>Quick-start initiator</small></span></div>
+        <div class="wcell"><span class="wk">CliftonStrengths</span><span class="wv">Achiever · Maximizer · Ideation · Futuristic · Activator</span></div>
+        <div class="wcell"><span class="wk">PRINT</span><span class="wv">4-2<small>To be special, to be needed</small></span></div>
+        <div class="wcell"><span class="wk">Working Genius</span><span class="wv">Invention · Galvanizing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PODCAST / VIDEO FEATURE -->
+<section class="podcast">
+  <div class="wrap">
+    <div class="podcast-grid">
+      <div class="podcast-video">
+        <iframe src="https://www.youtube.com/embed/zD0rpYS16AM" title="The MaxLife Podcast with Ben Laws" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="podcast-body reveal">
+        <span class="eyebrow">Hear Him</span>
+        <h2>Ben in <span class="accent">his own words.</span></h2>
+        <p>Before you apply, listen to him talk for thirty minutes. The MaxLife Podcast is where Ben thinks out loud about what arrived founders are actually navigating.</p>
+        <p>If the voice doesn't fit, you'll know quickly. <strong>If it does, you'll already know what the first call will feel like.</strong></p>
+        <div class="podcast-cta">
+          <a href="https://maxlifebenlaws.com/episodes" class="btn-primary">Browse All Episodes →</a>
+          <a href="https://www.youtube.com/@MaxLifeBenLaws" target="_blank" rel="noopener" class="btn-secondary">Watch on YouTube</a>
+        </div>
+        <div class="podcast-stats">
+          <div class="podcast-stat"><div class="n">200+</div><div class="l">Episodes</div></div>
+          <div class="podcast-stat"><div class="n">Weekly</div><div class="l">New conversations</div></div>
+          <div class="podcast-stat"><div class="n">Free</div><div class="l">Audio, video, full transcripts</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Client Outcomes</span>
+      <h2>What founders say<br/><span class="accent">after the work lands.</span></h2>
+      <p class="intro">Pulled from coaching transcripts. Names withheld until clients give permission to publish them.</p>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="slider" id="testimonialSlider">
+        <div class="testimonial">
+          <p class="quote">I described our cleaning process in passing. He stopped me mid-sentence: <strong>"We have to name this."</strong> By the end of the call we had a trademarked guarantee that became our competitive advantage. He sees things in your business you've stopped seeing yourself.</p>
+          <div class="attr">
+            <span class="who">Client 01</span>
+            <span class="ctx">Founders · Family Business · Texas</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="quote">He named what I'd been carrying for two years and couldn't say out loud. The Marilyn Monroe effect — everything looks perfect from outside, chaos inside. I'd been telling myself I was ungrateful. <strong>He said: "You're human. You're looking for something deeper."</strong> That sentence dropped a thousand pounds.</p>
+          <div class="attr">
+            <span class="who">Client 02</span>
+            <span class="ctx">Founder · Post-Exit</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="quote">In two weeks of working less, I didn't break the business. I discovered my ops lead is better than me at client issues. I reconnected with my wife. Started exercising again. Had a breakthrough product idea. <strong>That's when Ben said: "What does that tell you?"</strong> I'd been confusing being needed with being valuable for ten years.</p>
+          <div class="attr">
+            <span class="who">Client 03</span>
+            <span class="ctx">Founder · Multi-State Services</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="quote">He had me document, then create physical distance. Send the problem employee home for three weeks. Watch the company operate without him. <strong>The numbers held. The team got lighter.</strong> I'd been protecting a problem for years and called it loyalty.</p>
+          <div class="attr">
+            <span class="who">Client 04</span>
+            <span class="ctx">Founder · Industrial Services</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="quote">He gave me one filter: <strong>"I deal in big dollars. If a task doesn't, it's not my activity."</strong> That sentence changed how I structured my entire week. Within a month, I'd cleared sixty percent of what was on my calendar and revenue went up, not down.</p>
+          <div class="attr">
+            <span class="who">Client 05</span>
+            <span class="ctx">Founder · Logistics &amp; Real Estate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-nav">
+        <button class="slider-btn" id="slidePrev" aria-label="Previous">←</button>
+        <button class="slider-btn" id="slideNext" aria-label="Next">→</button>
+        <span class="slider-meta">Swipe or click · 5 outcomes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE 2 -->
+<section class="pullq sage">
+  <div class="pullq-inner reveal">
+    <span class="mark">"</span>
+    <p>Culture isn't a handbook.<br/><span class="accent">It's a sourdough starter.</span><br/>Three to five who feed it, protect it, and pass it on.</p>
+    <p class="attr">— Chapter 7 · The MaxLife Playbook</p>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="method">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Methodology</span>
+      <h2>Six frameworks for<br/><span class="accent">freedom through.</span></h2>
+      <p class="intro">Call these the instruments. They're the technical engineering of the work, and they matter. But the music is what happens when I'm in the room. A technical engineer hands you insight through a framework. A creative producer straps his nervous system to the project. You're hiring the second one.</p>
+    </div>
+
+    <div class="framework-grid reveal">
+      <div class="framework">
+        <div class="roman">I.</div>
+        <h4>Aligned vs. Obligation</h4>
+        <p>The three fuels every founder runs on. Most are burning a corrosive mix and don't know it. The first session names yours. Everything else gets easier.</p>
+        <div class="tag">Fuel Audit</div>
+      </div>
+      <div class="framework">
+        <div class="roman">II.</div>
+        <h4>The Five Dials</h4>
+        <p>Most founders track 47 metrics nobody reads. The Five Dials strips it to the four to six numbers per role that actually change how a person behaves on a Tuesday afternoon.</p>
+        <div class="tag">Scorecard</div>
+      </div>
+      <div class="framework">
+        <div class="roman">III.</div>
+        <h4>Pull vs. Push</h4>
+        <p>A push founder forces the future. A pull founder gets pulled toward it by a vision so clear they can't resist it. One scales. One burns out.</p>
+        <div class="tag">Founder Fuel</div>
+      </div>
+      <div class="framework">
+        <div class="roman">IV.</div>
+        <h4>The Sourdough Starter</h4>
+        <p>Find your three to five carriers. Each quarter they identify one or two more. The team scales 5 → 12 → 36 → 100, same culture intact.</p>
+        <div class="tag">Culture Carriers</div>
+      </div>
+      <div class="framework">
+        <div class="roman">V.</div>
+        <h4>The Three Gears</h4>
+        <p>Reset Days, Build Days, Explore Days. The trap is "66% thinking": being physically off but mentally still working. We fix the calendar so your brain actually gets the day off.</p>
+        <div class="tag">Time OS</div>
+      </div>
+      <div class="framework">
+        <div class="roman">VI.</div>
+        <h4>The MaxLife Question</h4>
+        <p>The single question I ask every founder in our first call. The answer becomes the architecture for everything we build over the next twelve months.</p>
+        <div class="tag">Opening Move</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BREAK 4: desk -->
+<section class="lifestyle-break" style="background-image:url('https://maxlifebenlaws.com/ben-coaching/img/desk.png')">
+  <div class="wrap">
+    <div class="cap reveal">
+      <span class="eyebrow">Twelve months together</span>
+      <h3>The page is empty.<br/><span class="accent">Let's write the next chapter together.</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFY -->
+<section class="qualify">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Is This For You</span>
+      <h2>This isn't right for everyone.<br/><span class="accent">And that's the point.</span></h2>
+    </div>
+    <div class="qualify-grid">
+      <div class="qualify-col yes reveal">
+        <div class="qualify-stamp">
+          <span class="label-text">Good Fit For You</span>
+          <span class="icon">✓</span>
+        </div>
+        <div class="qualify-body">
+          <h3>If you're <span class="accent">here</span>,<br/>we should talk.</h3>
+          <ul class="qualify-list">
+            <li><span class="glyph">+</span><span>You run a company between $5M and $50M and the growth feels slower than your appetite.</span></li>
+            <li><span class="glyph">+</span><span>You've outgrown the coaches and frameworks that got you here.</span></li>
+            <li><span class="glyph">+</span><span>The business already hums. What you're after now isn't another playbook. It's expression, and the expansion that follows.</span></li>
+            <li><span class="glyph">+</span><span>You suspect your nervous system is more entangled with the business than is healthy.</span></li>
+            <li><span class="glyph">+</span><span>You can feel the next decade should be bigger, and you're ready to give it a shape.</span></li>
+            <li><span class="glyph">+</span><span>You're approaching an exit, just past one, or quietly building toward one.</span></li>
+            <li><span class="glyph">+</span><span>Marriage, kids, or health have started showing the bill from the last ten years.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="qualify-col no reveal">
+        <div class="qualify-stamp">
+          <span class="label-text">Not A Fit</span>
+          <span class="icon">✕</span>
+        </div>
+        <div class="qualify-body">
+          <h3>If you're <span class="accent">here</span>,<br/>we're not a fit (yet).</h3>
+          <ul class="qualify-list">
+            <li><span class="glyph">−</span><span>You're looking for a tactical sales or marketing coach to fix a revenue gap.</span></li>
+            <li><span class="glyph">−</span><span>You want someone to validate the version of you that got you here.</span></li>
+            <li><span class="glyph">−</span><span>You don't believe culture, family, and capital are the same conversation.</span></li>
+            <li><span class="glyph">−</span><span>You're under $5M and still proving the business model works.</span></li>
+            <li><span class="glyph">−</span><span>You want hype, 24/7 on-demand access, or weekly group calls. This isn't that.</span></li>
+            <li><span class="glyph">−</span><span>You need a coach who tells you what you want to hear.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="engage">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Engagement</span>
+      <h2>What twelve months together<br/><span class="accent">actually looks like.</span></h2>
+    </div>
+
+    <div class="cadence reveal">
+      <div class="cadence-head">
+        <span class="label">Your Year, Mapped.</span>
+        <span class="meta">12 month engagement</span>
+      </div>
+      <div class="cadence-row">
+        <div class="month"><span class="m">Jan</span><div class="ev"><div class="retreat">Intensive</div></div></div>
+        <div class="month"><span class="m">Feb</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Mar</span><div class="ev"><div class="deepdive">Strategy</div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Apr</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">May</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Jun</span><div class="ev"><div class="deepdive">Strategy</div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Jul</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Aug</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Sep</span><div class="ev"><div class="deepdive">Strategy</div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Oct</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Nov</span><div class="ev"><div class="call"></div><div class="voice"></div><div class="call"></div></div></div>
+        <div class="month"><span class="m">Dec</span><div class="ev"><div class="retreat">Intensive</div></div></div>
+      </div>
+      <div class="cadence-legend">
+        <div class="item"><span class="swatch call"></span><span>Coaching call · 2× per month + additional as needed</span></div>
+        <div class="item"><span class="swatch voice"></span><span>Voice/text messages between calls</span></div>
+        <div class="item"><span class="swatch deepdive"></span><span>Quarterly Strategic Session · half-day on a single defining question</span></div>
+        <div class="item"><span class="swatch retreat"></span><span>Private intensive · 2 days · front + back end of the year</span></div>
+      </div>
+    </div>
+
+    <div class="engage-cards">
+      <div class="engage-card reveal"><div class="k">Cadence</div><div class="v">Two calls<br/><span class="accent">per month on average</span></div><div class="desc">Sometimes weekly during deep work, sometimes monthly during stability. Dialed to where you are. Recorded and transcribed.</div></div>
+      <div class="engage-card reveal"><div class="k">Access</div><div class="v">Voice/text messages<br/><span class="accent">between calls</span></div><div class="desc">For the moments when the question can't wait. Capped, intentional, answered personally by Ben.</div></div>
+      <div class="engage-card reveal"><div class="k">In Person</div><div class="v">Two intensives<br/><span class="accent">per year</span></div><div class="desc">One up front to set the year, one on the back end to close it. Two days each, location of mutual choosing. Spouse welcome for the closing dinner.</div></div>
+    </div>
+
+    <div class="invest-banner reveal">
+      <div>
+        <div class="k">Investment</div>
+        <div class="v">$250,000 / year</div>
+        <div class="lead">You're not buying hours or a curriculum. You're buying <span class="accent">my full attention and nervous system</span> on your life and company for a year.</div>
+        <div class="small">There's a word that doesn't belong here, and it's "spend." This isn't a cost. It's allocation toward the next version of you, the same way you'd put capital behind an asset. For founders whose decisions move millions per quarter, it's calibrated, not premium. Twelve-month engagement, paid quarterly. Roster capped at 12 active founders. By application only.</div>
+      </div>
+      <a href="#apply" class="btn-primary" style="white-space:nowrap">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BREAK 5: lake -->
+<section class="lifestyle-break" style="background-image:url('https://maxlifebenlaws.com/ben-coaching/img/lake-sunrise.png')">
+  <div class="wrap">
+    <div class="cap reveal">
+      <span class="eyebrow">What becomes possible</span>
+      <h3>The vision, built bigger than you pictured.<br/>The family, still whole.<br/><span class="accent">The life that was the point all along.</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="apply-grid">
+      <div class="apply-intro reveal">
+        <span class="eyebrow">Application</span>
+        <h2 style="margin-top:18px">If this sounds like<br/><span class="accent">your next chapter,</span><br/>start here.</h2>
+        <p>The roster is small on purpose. The application is short on purpose. <strong>Tell us where you are and what's pulling you.</strong> If there's a fit, you'll hear from Beth within 48 hours to schedule a 30-minute call with Ben.</p>
+        <p>If it's not the right fit, you'll hear that too. Either outcome is a good one — better to know now than three months in.</p>
+        <div class="apply-process">
+          <div class="process-step"><span class="n">01</span><span class="what">You apply</span><span class="desc">Four fields. About five minutes.</span></div>
+          <div class="process-step"><span class="n">02</span><span class="what">We review within 48 hours</span><span class="desc">Beth reviews every application personally.</span></div>
+          <div class="process-step"><span class="n">03</span><span class="what">30-minute fit call with Ben</span><span class="desc">No pitch. We talk about whether the practice is right for what you're navigating.</span></div>
+          <div class="process-step"><span class="n">04</span><span class="what">Decision within seven days</span><span class="desc">Mutual yes or mutual no. Both are good outcomes.</span></div>
+        </div>
+      </div>
+
+      <form class="apply-form reveal" id="coachingApply" onsubmit="return submitCoachingApplication(event);">
+        <h3>Private Coaching Application</h3>
+        <p class="hint">Reviewed within 48 hours. Replies come from Beth Laws.</p>
+
+        <div class="field-row">
+          <div class="field"><label for="name">Your Name</label><input type="text" id="name" name="name" required placeholder="First & Last" /></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="founder@company.com" /></div>
+        </div>
+
+        <div class="field-row">
+          <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" required placeholder="Company name" /></div>
+          <div class="field"><label for="revenue">Annual Revenue</label><select id="revenue" name="revenue" required>
+            <option value="">Select range</option>
+            <option>Under $5M</option>
+            <option>$5M – $15M</option>
+            <option>$15M – $30M</option>
+            <option>$30M – $50M</option>
+            <option>$50M +</option>
+            <option>Recently exited</option>
+          </select></div>
+        </div>
+
+        <div class="field"><label for="pulling">What's pulling you to reach out now?</label>
+          <textarea id="pulling" name="pulling" placeholder="Two or three sentences. What's actually true about where you are. We read every word." required></textarea>
+        </div>
+
+        <div class="field"><label for="source">How did you hear about Ben? (Optional)</label>
+          <input type="text" id="source" name="source" placeholder="Referral, podcast, book, search..." />
+        </div>
+
+        <button type="submit" class="submit">Submit Application →</button>
+        <p class="disclaim">Your information stays between Beth and Ben. Never shared, never marketed to.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="brand">
+        <span class="logo">M</span>
+        <span class="name">Max<em>Life</em></span>
+      </div>
+      <div class="foot-meta">
+        Private Coaching with Ben Laws<br/>
+        <a href="#apply">Apply</a> · <a href="mailto:beth@maxlife.co">Contact Beth</a><br/>
+        © MaxLife · Operated quietly since 2005
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Form submission to form-relay
+async function submitCoachingApplication(e){
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('.submit');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Submitting...';
+  submitBtn.disabled = true;
+
+  const data = {
+    client_id: 'maxlife-coaching',
+    form_type: 'apply',
+    name: form.name.value,
+    email: form.email.value,
+    company: form.company.value,
+    revenue: form.revenue.value,
+    pulling: form.pulling.value,
+    source: form.source.value,
+  };
+
+  try {
+    const res = await fetch('https://form-relay-production.up.railway.app/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data),
+    });
+    if(!res.ok) throw new Error('Submission failed');
+    submitBtn.textContent = 'Thank you · Beth will be in touch';
+  } catch(err){
+    submitBtn.textContent = 'Try again — submission failed';
+    submitBtn.disabled = false;
+    console.error('Form submission error:', err);
+  }
+  return false;
+}
+
+// Testimonial slider nav
+const slider = document.getElementById('testimonialSlider');
+const slidePrev = document.getElementById('slidePrev');
+const slideNext = document.getElementById('slideNext');
+if(slider && slidePrev && slideNext){
+  const slideBy = () => slider.querySelector('.testimonial').offsetWidth + 24;
+  slidePrev.addEventListener('click', () => slider.scrollBy({left: -slideBy(), behavior:'smooth'}));
+  slideNext.addEventListener('click', () => slider.scrollBy({left: slideBy(), behavior:'smooth'}));
+}
+</script>
+</body>
+</html>
