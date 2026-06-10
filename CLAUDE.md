@@ -5,9 +5,10 @@ This folder is the **staging preview** of the new MaxLife homepage + coaching pa
 ## Files
 - `index.html` — new **homepage** (brand front door: two doors → podcast `/episodes` + coaching). Hero portrait is square (1:1). Links: "Coaching"/"Work with Ben" → `coaching.html`; podcast/episodes → live `https://maxlifebenlaws.com/episodes`.
 - `coaching.html` — rewritten **coaching page**. Section order: Hero → Decisions ("calls that move millions") → Creative-producer positioning → Three Freedoms → What it's actually for (marriage/purpose) → Reckoning → Meet your producer → How I work (+ wiring strip) → Podcast → Testimonials → Methodology → Qualify → Engagement ($250k) → Apply.
-- `server.js` + `package.json` — tiny static server, binds `0.0.0.0` (Railway requirement). `npm start`.
+- `brand/index.html` + `brand/assets/` — **Brand & logo presentation** for Ben/Beth (the #44 Shield + Twin Peaks logo system, logo lockups, 13 swag mockups, digital placements). Lives at `/brand/` on staging.
+- `server.js` + `package.json` — tiny static server, binds `0.0.0.0` (Railway requirement). Serves directory requests (`/brand/` → `brand/index.html`). `npm start`.
 
-Asset images and the `/episodes` links point at the **live** `maxlifebenlaws.com`, so the pages render fully when opened directly.
+Asset images and the `/episodes` links on the homepage/coaching pages point at the **live** `maxlifebenlaws.com`, so they render fully when opened directly. The `brand/` presentation bundles its own assets locally.
 
 ## Local preview
 `python3 -m http.server 8799` from this folder → http://localhost:8799/
