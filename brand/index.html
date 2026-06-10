@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MaxLife — Logo &amp; Brand Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F5EFE2;
+  --paper-warm: #FBF7ED;
+  --paper-deep: #EBE3D0;
+  --navy: #0F172A;
+  --gold: #D4A853;
+  --clay-deep: #8A3F1E;
+  --ink: #0A0B0F;
+  --rye: #5C5950;
+  --rule: rgba(10,11,15,.18);
+  --rule-soft: rgba(10,11,15,.08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.55 Inter, -apple-system, sans-serif;
+}
+img { max-width: 100%; display: block; }
+
+/* HERO */
+.hero {
+  padding: 96px clamp(24px, 5vw, 80px) 80px;
+  background: var(--paper-warm);
+  border-bottom: 1px solid var(--rule-soft);
+  text-align: center;
+}
+.hero .eyebrow {
+  font: 700 .78rem/1.4 Inter;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--clay-deep);
+  margin-bottom: 28px;
+}
+.hero .mark { max-width: 360px; margin: 0 auto 48px; }
+.hero h1 {
+  margin: 0;
+  font: 600 clamp(36px, 5vw, 64px)/.95 'Cormorant Garamond', serif;
+  letter-spacing: -.01em;
+  color: var(--navy);
+}
+.hero .tagline {
+  margin: 24px auto 0;
+  max-width: 720px;
+  font: 400 clamp(17px, 1.6vw, 22px)/1.5 'Cormorant Garamond', serif;
+  color: var(--rye);
+  font-style: italic;
+}
+
+/* SECTION */
+section {
+  padding: 96px clamp(24px, 5vw, 80px);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+section + section { border-top: 1px solid var(--rule-soft); }
+section.dark {
+  background: var(--navy);
+  color: var(--paper-warm);
+  max-width: none;
+  margin: 0;
+}
+section.dark h2 { color: var(--paper-warm); }
+section.dark .sub { color: rgba(245,239,226,.7); }
+
+.section-head { margin-bottom: 48px; max-width: 720px; }
+.section-head .eyebrow {
+  font: 700 .78rem/1.4 Inter;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--clay-deep);
+  margin-bottom: 16px;
+}
+section.dark .section-head .eyebrow { color: var(--gold); }
+.section-head h2 {
+  margin: 0;
+  font: 800 clamp(28px, 3.4vw, 44px)/1 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  color: var(--navy);
+}
+.section-head .sub {
+  margin: 16px 0 0;
+  font-size: 16px;
+  color: var(--rye);
+}
+
+/* LOGO SYSTEM GRID */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.logo-cell {
+  border: 1px solid var(--rule-soft);
+}
+.logo-cell .label {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--rule-soft);
+  background: var(--paper-warm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-cell .label .name {
+  font: 700 .78rem/1.2 Inter;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--navy);
+}
+.logo-cell .label .variant {
+  font: 500 .68rem/1 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--rye);
+}
+.logo-cell .preview {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  cursor: zoom-in;
+}
+.logo-cell .preview img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.logo-cell.standard .preview { background: var(--paper-warm); }
+.logo-cell.reverse .preview { background: var(--navy); }
+.logo-cell .footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--rule-soft);
+  display: flex;
+  justify-content: space-between;
+  font: 500 .72rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--rye);
+  background: var(--paper-warm);
+}
+@media (max-width: 900px) { .logo-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .logo-grid { grid-template-columns: 1fr; } }
+
+/* COLOR PALETTE */
+.palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.swatch {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  font: 500 .72rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.swatch .name { font: 700 .78rem/1 Inter; letter-spacing: .14em; margin-bottom: 8px; }
+.swatch.navy { background: var(--navy); color: var(--paper-warm); }
+.swatch.cream { background: var(--paper-warm); color: var(--navy); border: 1px solid var(--rule-soft); }
+.swatch.gold { background: var(--gold); color: var(--navy); }
+.swatch.clay { background: var(--clay-deep); color: var(--paper-warm); }
+@media (max-width: 700px) { .palette { grid-template-columns: 1fr 1fr; } }
+
+/* DIGITAL PLACEMENTS */
+.placement-stack { display: flex; flex-direction: column; gap: 64px; }
+.placement {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.placement-meta h3 {
+  margin: 0 0 8px;
+  font: 800 18px/1.2 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--navy);
+}
+.placement-meta .spec {
+  font: 500 .72rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--rye);
+}
+.placement-meta .note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--rye);
+}
+.placement-frame {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule-soft);
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .placement { grid-template-columns: 1fr; }
+}
+
+/* WEBSITE NAV MOCK (matches maxlifebenlaws.com) */
+.mock-website {
+  background: var(--paper);
+  height: 560px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.mock-website .nav {
+  padding: 18px clamp(24px, 5vw, 56px);
+  background: rgba(245,239,226,.95);
+  border-bottom: 1px solid var(--rule-soft);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.mock-website .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.mock-website .nav-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+.mock-website .nav-links {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+  margin-right: 28px;
+  font: 500 .7rem/1 'JetBrains Mono', monospace;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--rye);
+}
+.mock-website .nav-cta {
+  font: 600 .9rem/1 Inter;
+  letter-spacing: .01em;
+  padding: 12px 24px;
+  background: var(--navy);
+  color: var(--paper);
+}
+.mock-website .hero-area {
+  flex: 1;
+  padding: 60px clamp(24px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mock-website .hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 12px;
+  background: var(--navy);
+  color: var(--gold);
+  font: 700 .66rem/1 Inter;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+.mock-website .hero-h1 {
+  margin: 0 0 18px;
+  font: 900 clamp(36px, 5.5vw, 72px)/.9 'Big Shoulders Display', sans-serif;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: var(--navy);
+  max-width: 14ch;
+}
+.mock-website .hero-h1 .accent { color: var(--clay-deep); }
+.mock-website .hero-sub {
+  margin: 0 0 26px;
+  font: 500 clamp(15px, 1.4vw, 18px)/1.4 Inter;
+  color: var(--ink);
+  max-width: 44ch;
+}
+.mock-website .hero-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.mock-website .hero-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  font: 700 .85rem/1 Inter;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.mock-website .hero-btn.primary { background: var(--navy); color: var(--paper); }
+.mock-website .hero-btn.secondary { color: var(--navy); border-bottom: 2px solid var(--navy); }
+
+/* YOUTUBE CHANNEL BANNER */
+.mock-yt {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2438 100%);
+  height: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mock-yt-logo { max-width: 360px; max-height: 220px; }
+.mock-yt-handle {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  color: rgba(245,239,226,.6);
+  font: 500 .72rem/1 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+/* AVATAR ROW */
+.avatars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 48px;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-warm) 100%);
+}
+.avatar-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.avatar-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(15,23,42,.15);
+}
+.avatar-circle img { width: 100%; height: 100%; object-fit: contain; }
+.avatar-cell.cream .avatar-circle { background: var(--paper-warm); border: 1px solid var(--rule-soft); }
+.avatar-label {
+  font: 500 .72rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--navy);
+  text-align: center;
+}
+.avatar-label small {
+  display: block;
+  color: var(--rye);
+  font-size: .68rem;
+  margin-top: 4px;
+}
+
+/* TWITTER HEADER MOCK */
+.mock-twitter {
+  background: var(--navy);
+  height: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mock-twitter-logo { max-width: 440px; max-height: 200px; }
+.mock-twitter-avatar {
+  position: absolute;
+  bottom: -56px;
+  left: 32px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: var(--paper-warm);
+  border: 4px solid var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 2;
+}
+.mock-twitter-avatar img { width: 100%; height: 100%; object-fit: contain; }
+.mock-twitter-meta {
+  padding: 72px 32px 24px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.mock-twitter-meta .handle-name {
+  font: 700 18px/1.2 Inter;
+  color: var(--navy);
+}
+.mock-twitter-meta .handle {
+  font: 400 14px/1.4 Inter;
+  color: var(--rye);
+  margin-top: 2px;
+}
+.mock-twitter-meta .bio {
+  margin-top: 12px;
+  font: 400 14px/1.5 Inter;
+  color: var(--ink);
+}
+
+/* INSTAGRAM GRID MOCK */
+.mock-ig {
+  background: var(--paper);
+  padding: 32px;
+}
+.mock-ig-head {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.mock-ig-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex-shrink: 0;
+}
+.mock-ig-avatar img { width: 100%; height: 100%; object-fit: contain; }
+.mock-ig-meta .handle { font: 700 18px/1.2 Inter; color: var(--navy); }
+.mock-ig-meta .stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+  font: 500 13px/1 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--rye);
+}
+.mock-ig-meta .stats b { color: var(--navy); margin-right: 4px; }
+.mock-ig-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.mock-ig-tile {
+  aspect-ratio: 1 / 1;
+  background: var(--paper-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--rule-soft);
+}
+.mock-ig-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.mock-ig-tile.navy { background: var(--navy); }
+.mock-ig-tile.quote {
+  font: 400 14px/1.4 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--rye);
+  text-align: center;
+  padding: 20px;
+}
+.mock-ig-tile.quote.dark { background: var(--navy); color: rgba(245,239,226,.85); }
+
+/* LIFESTYLE MOCKUPS */
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.lifestyle-cell {
+  border: 1px solid rgba(245,239,226,.12);
+  background: var(--paper-warm);
+}
+.lifestyle-thumb {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.lifestyle-thumb img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.lifestyle-thumb:hover img { transform: scale(1.04); }
+.lifestyle-thumb .zoom-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10, 11, 15, .82);
+  color: var(--paper-warm);
+  font: 600 .62rem/1 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: 8px 10px;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  transition: background .2s ease, transform .2s ease;
+}
+.lifestyle-thumb .zoom-badge svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.lifestyle-thumb:hover .zoom-badge {
+  background: var(--gold);
+  color: var(--navy);
+  transform: scale(1.05);
+}
+.lifestyle-cell .meta {
+  padding: 16px 20px;
+  border-top: 1px solid var(--rule-soft);
+  font: 700 .78rem/1.2 Inter;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--navy);
+  background: var(--paper-warm);
+}
+.lifestyle-cell .meta small {
+  display: block;
+  margin-top: 6px;
+  font: 400 12px/1.4 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--rye);
+}
+.lifestyle-pending {
+  border: 1px dashed var(--rule);
+  background: var(--paper);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 500 .78rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--rye);
+  gap: 8px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,11,15,.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px;
+  cursor: zoom-out;
+}
+.modal.open { display: flex; }
+.modal img {
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+  background: var(--paper-warm);
+  box-shadow: 0 24px 80px rgba(0,0,0,.5);
+}
+.modal-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  color: white;
+  width: 44px;
+  height: 44px;
+  font: 400 24px/1 sans-serif;
+  cursor: pointer;
+  border-radius: 0;
+}
+.modal-close:hover { background: rgba(255,255,255,.1); }
+
+footer {
+  padding: 48px clamp(24px, 5vw, 80px);
+  text-align: center;
+  background: var(--navy);
+  color: rgba(245,239,226,.65);
+  font: 500 .72rem/1.4 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Brand Identity · Round 1 Selection</div>
+  <img class="mark zoom" src="assets/logo-stacked-standard.png" alt="MaxLife stacked logo">
+  <h1>The MaxLife mark, in full presentation.</h1>
+  <p class="tagline">Climbing with the people you care about.</p>
+</section>
+
+<!-- LOGO SYSTEM -->
+<section>
+  <div class="section-head">
+    <div class="eyebrow">Logo System</div>
+    <h2>One mark, three forms, two color modes</h2>
+    <p class="sub">A complete identity system. Each form has a standard (navy on cream) and reverse (cream on navy) variant for every surface and context.</p>
+  </div>
+  <div class="logo-grid">
+    <div class="logo-cell standard">
+      <div class="label"><span class="name">Stacked</span><span class="variant">Standard</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-stacked-standard.png" alt="Stacked standard"></div>
+      <div class="footer"><span>Primary</span><span>1:1 ratio</span></div>
+    </div>
+    <div class="logo-cell standard">
+      <div class="label"><span class="name">Horizontal</span><span class="variant">Standard</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-horizontal-standard.png" alt="Horizontal standard"></div>
+      <div class="footer"><span>Nav · Email</span><span>3:1 ratio</span></div>
+    </div>
+    <div class="logo-cell standard">
+      <div class="label"><span class="name">Icon</span><span class="variant">Standard</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-icon-standard.png" alt="Icon standard"></div>
+      <div class="footer"><span>Favicon · App icon</span><span>1:1 ratio</span></div>
+    </div>
+    <div class="logo-cell reverse">
+      <div class="label"><span class="name">Stacked</span><span class="variant">Reverse</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-stacked-reverse.png" alt="Stacked reverse"></div>
+      <div class="footer"><span>Dark backgrounds</span><span>1:1 ratio</span></div>
+    </div>
+    <div class="logo-cell reverse">
+      <div class="label"><span class="name">Horizontal</span><span class="variant">Reverse</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-horizontal-reverse.png" alt="Horizontal reverse"></div>
+      <div class="footer"><span>Dark backgrounds</span><span>3:1 ratio</span></div>
+    </div>
+    <div class="logo-cell reverse">
+      <div class="label"><span class="name">Icon</span><span class="variant">Reverse</span></div>
+      <div class="preview"><img class="zoom" src="assets/logo-icon-reverse.png" alt="Icon reverse"></div>
+      <div class="footer"><span>Dark backgrounds</span><span>1:1 ratio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PALETTE -->
+<section>
+  <div class="section-head">
+    <div class="eyebrow">Color Palette</div>
+    <h2>Navy &amp; cream, with gold and clay as accents</h2>
+    <p class="sub">The brand lives in single-color logo applications: navy on cream, or cream on navy. Gold reads only on navy backgrounds. Clay-deep is reserved for editorial accents in body content, never the mark.</p>
+  </div>
+  <div class="palette">
+    <div class="swatch navy"><div class="name">Navy</div>#0F172A</div>
+    <div class="swatch cream"><div class="name">Cream</div>#FBF7ED</div>
+    <div class="swatch gold"><div class="name">Gold</div>#D4A853</div>
+    <div class="swatch clay"><div class="name">Clay</div>#8A3F1E</div>
+  </div>
+</section>
+
+<!-- DIGITAL PLACEMENTS -->
+<section>
+  <div class="section-head">
+    <div class="eyebrow">Digital Placements</div>
+    <h2>How the mark presents on every surface</h2>
+    <p class="sub">From web to YouTube to social, the system holds. Icon for tight circular crops, horizontal for navigation bars, stacked for hero placements.</p>
+  </div>
+  <div class="placement-stack">
+
+    <!-- Website -->
+    <div class="placement">
+      <div class="placement-meta">
+        <h3>Website Navigation</h3>
+        <div class="spec">maxlifebenlaws.com</div>
+        <p class="note">Horizontal lockup in the nav, stacked logo as the centerpiece of the cover area.</p>
+      </div>
+      <div class="placement-frame">
+        <div class="mock-website">
+          <div class="nav">
+            <div class="nav-brand">
+              <img class="nav-logo zoom" src="assets/logo-horizontal-standard.png" alt="">
+            </div>
+            <div class="nav-links"><span>Coaching</span><span>Podcast</span><span>Speaking</span><span>Book</span></div>
+            <div class="nav-cta">Apply</div>
+          </div>
+          <div class="hero-area">
+            <span class="hero-eyebrow">For founders running $5M-$50M companies</span>
+            <h2 class="hero-h1">Climb <span class="accent">with</span> the people you love.</h2>
+            <p class="hero-sub">The real scoreboard was never the exit. Private coaching for founders who already arrived and quietly suspect the next chapter is bigger than the last one.</p>
+            <div class="hero-cta">
+              <a class="hero-btn primary">Apply to coach</a>
+              <a class="hero-btn secondary">Read the book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YouTube banner -->
+    <div class="placement">
+      <div class="placement-meta">
+        <h3>YouTube Channel Art</h3>
+        <div class="spec">2560 × 1440 · safe area 1546 × 423</div>
+        <p class="note">Reverse stacked logo centered on the navy banner. Handle appears bottom-left.</p>
+      </div>
+      <div class="placement-frame">
+        <div class="mock-yt">
+          <img class="mock-yt-logo zoom" src="assets/logo-stacked-reverse.png" alt="">
+          <div class="mock-yt-handle">@MaxLifeBenLaws</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatars (YT, Twitter, IG) -->
+    <div class="placement">
+      <div class="placement-meta">
+        <h3>Profile Avatars</h3>
+        <div class="spec">YouTube · X · Instagram · LinkedIn</div>
+        <p class="note">Icon only, centered, generous padding. Reverse on navy is the primary; cream available for light contexts.</p>
+      </div>
+      <div class="placement-frame">
+        <div class="avatars">
+          <div class="avatar-cell">
+            <div class="avatar-circle"><img src="assets/logo-icon-reverse-tight.png" alt=""></div>
+            <div class="avatar-label">Primary<small>Reverse · navy fill</small></div>
+          </div>
+          <div class="avatar-cell cream">
+            <div class="avatar-circle"><img src="assets/logo-icon-standard-tight.png" alt=""></div>
+            <div class="avatar-label">Alternate<small>Standard · cream fill</small></div>
+          </div>
+          <div class="avatar-cell">
+            <div class="avatar-circle"><img src="assets/logo-icon-reverse-tight.png" alt=""></div>
+            <div class="avatar-label">Favicon<small>Same icon, 32×32</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Twitter / X profile -->
+    <div class="placement">
+      <div class="placement-meta">
+        <h3>X / Twitter Profile</h3>
+        <div class="spec">Header 1500 × 500 · Avatar 400 × 400</div>
+        <p class="note">Reverse horizontal in the header, icon-reverse in the avatar circle for full system consistency.</p>
+      </div>
+      <div class="placement-frame">
+        <div class="mock-twitter">
+          <img class="mock-twitter-logo zoom" src="assets/logo-horizontal-reverse.png" alt="">
+          <div class="mock-twitter-avatar"><img src="assets/logo-icon-standard-tight.png" alt=""></div>
+        </div>
+        <div class="mock-twitter-meta">
+          <div class="handle-name">MaxLife with Ben Laws</div>
+          <div class="handle">@MaxLifeBenLaws</div>
+          <div class="bio">Climbing with the people you care about. Coaching for founders.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="placement">
+      <div class="placement-meta">
+        <h3>Instagram Profile</h3>
+        <div class="spec">Avatar 320 × 320 · Posts 1080 × 1080</div>
+        <p class="note">Icon-reverse in the avatar. Posts alternate between mark and brand voice quotes for a cohesive grid.</p>
+      </div>
+      <div class="placement-frame">
+        <div class="mock-ig">
+          <div class="mock-ig-head">
+            <div class="mock-ig-avatar"><img src="assets/logo-icon-reverse-tight.png" alt=""></div>
+            <div class="mock-ig-meta">
+              <div class="handle">maxlifebenlaws</div>
+              <div class="stats">
+                <span><b>184</b> posts</span>
+                <span><b>2.3k</b> followers</span>
+                <span><b>312</b> following</span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-ig-grid">
+            <div class="mock-ig-tile"><img src="assets/logo-stacked-standard.png" alt=""></div>
+            <div class="mock-ig-tile quote">The real scoreboard was never the exit.</div>
+            <div class="mock-ig-tile navy"><img src="assets/logo-icon-reverse.png" alt=""></div>
+            <div class="mock-ig-tile quote dark">Climbing with the people you care about.</div>
+            <div class="mock-ig-tile"><img src="assets/logo-stacked-standard.png" alt=""></div>
+            <div class="mock-ig-tile navy"><img src="assets/logo-stacked-reverse.png" alt=""></div>
+            <div class="mock-ig-tile quote">Win the right scoreboard.</div>
+            <div class="mock-ig-tile navy"><img src="assets/logo-icon-reverse.png" alt=""></div>
+            <div class="mock-ig-tile"><img src="assets/logo-stacked-standard.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIFESTYLE / SWAG -->
+<section class="dark">
+  <div class="section-head">
+    <div class="eyebrow">Lifestyle &amp; Merchandise</div>
+    <h2>The mark in the wild</h2>
+    <p class="sub">Premium swag drops — Yeti, Stanley, Travis Mathew. Single-color embroidery and laser engraving translate the digital mark to hand-feel.</p>
+  </div>
+  <div class="lifestyle-grid" id="lifestyleGrid">
+    <!-- Cells injected by JS so the swag set is easy to update -->
+  </div>
+</section>
+
+<footer>MaxLife · Round 1 Selection · #44 Shield + Twin Peaks</footer>
+
+<div class="modal" id="modal">
+  <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+  <img id="modalImg" alt="">
+</div>
+
+<script>
+// Lifestyle grid auto-populate with zoom badges
+const SWAG_FILES = [
+  // Headline kits — the full drop
+  { file: 'Founder Kit Box - Navy.png', label: 'Founder Kit Box', sub: 'The complete onboarding drop' },
+  { file: 'Private Jet Kit.png', label: 'Private Jet Kit', sub: 'Wheels-up edition' },
+  // Drinkware
+  { file: 'YETI Rambler.png', label: 'Yeti Rambler', sub: 'Laser-engraved travel tumbler' },
+  { file: 'Stanley Quencher.png', label: 'Stanley Quencher', sub: 'Cream 40oz with navy mark' },
+  // Apparel
+  { file: 'TravisMathew Polo.png', label: 'Travis Mathew Polo', sub: 'Embroidered chest mark' },
+  { file: 'TravisMathew Hat.png', label: 'Travis Mathew Hat', sub: 'Structured 6-panel cap' },
+  { file: 'Patagonia Better Sweater Vest.png', label: 'Patagonia Better Sweater Vest', sub: 'Founder uniform, embroidered' },
+  // Leather goods
+  { file: 'Executive Notebook.png', label: 'Executive Notebook', sub: 'Debossed leather cover' },
+  { file: 'Leather Passport Wallet.png', label: 'Leather Passport Wallet', sub: 'For founders who travel' },
+  { file: 'Leather Tech Organizer.png', label: 'Leather Tech Organizer', sub: 'Cables, AirPods, dongles' },
+  { file: 'Leather Weekender Bag.png', label: 'Leather Weekender Bag', sub: 'Carry-on heritage' },
+  // Tech
+  { file: 'Anker Prime Power Bank.png', label: 'Anker Prime Power Bank', sub: 'Tonal logo plate' },
+  // Closer — the heirloom
+  { file: 'Challenge Coin.png', label: 'Challenge Coin', sub: 'The signature heirloom piece' },
+];
+const PENDING_COUNT = 0; // 13 shipped (navy founder kit removed)
+
+const zoomIconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`;
+
+const lifestyleGrid = document.getElementById('lifestyleGrid');
+let lifestyleHtml = '';
+for (const s of SWAG_FILES) {
+  lifestyleHtml += `
+    <div class="lifestyle-cell">
+      <div class="lifestyle-thumb">
+        <img class="zoom" src="assets/swag/${encodeURI(s.file)}" alt="${s.label}">
+        <div class="zoom-badge">${zoomIconSVG} Click to enlarge</div>
+      </div>
+      <div class="meta">${s.label}${s.sub ? `<small>${s.sub}</small>` : ''}</div>
+    </div>`;
+}
+for (let i = 0; i < PENDING_COUNT; i++) {
+  lifestyleHtml += `
+    <div class="lifestyle-cell">
+      <div class="lifestyle-pending"><div>Pending</div><div>generating</div></div>
+    </div>`;
+}
+lifestyleGrid.innerHTML = lifestyleHtml;
+
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalClose = document.getElementById('modalClose');
+function openModal(src) {
+  modalImg.src = src;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  modal.classList.remove('open');
+  modalImg.src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('click', (e) => {
+  const el = e.target;
+  if (el.tagName === 'IMG' && el.classList.contains('zoom')) openModal(el.src);
+});
+modal.addEventListener('click', (e) => {
+  if (e.target === modal || e.target === modalImg) closeModal();
+});
+modalClose.addEventListener('click', closeModal);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
+</script>
+</body></html>
