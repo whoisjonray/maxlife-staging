@@ -74,6 +74,25 @@ nav.top{padding:16px 0;position:sticky;top:0;background:rgba(245,239,226,.95);ba
 .door:hover .go{color:var(--gold)}
 @media(max-width:760px){.doors-grid{grid-template-columns:1fr}.door:first-child{border-right:0;border-bottom:1px solid rgba(245,239,226,.16)}}
 
+/* COMMUNITY WAITLIST */
+.community{background:var(--paper-deep);padding:clamp(56px,8vw,104px) 0;border-block:1px solid var(--rule-soft)}
+.comm-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center}
+.comm-grid h2{font-family:'Big Shoulders Display';font-weight:900;font-size:clamp(32px,4.6vw,64px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--navy);margin:14px 0 18px}
+.comm-grid h2 .accent{color:var(--clay)}
+.comm-grid p{color:var(--ink-soft);font-size:1.05rem;line-height:1.6;margin-bottom:1em;font-weight:400;max-width:52ch}
+.comm-grid p strong{color:var(--ink);font-weight:700}
+.comm-card{background:var(--paper-warm);border:1.5px solid var(--navy);box-shadow:12px 12px 0 rgba(15,23,42,.12);padding:clamp(28px,3.5vw,44px)}
+.comm-card .k{font-family:'JetBrains Mono';font-weight:600;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay-deep);margin-bottom:14px;display:block}
+.comm-card h3{font-family:'Big Shoulders Display';font-weight:800;font-size:1.6rem;line-height:1;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
+.comm-card .sub2{font-size:.92rem;color:var(--ink-soft);margin-bottom:18px}
+.comm-form{display:flex;flex-direction:column;gap:12px}
+.comm-form input,.comm-form select,.comm-form textarea{width:100%;padding:14px 16px;border:1.5px solid var(--rule);background:#fff;font-family:'Inter';font-size:.95rem;color:var(--ink)}
+.comm-form textarea{min-height:74px;resize:vertical}
+.comm-form label{font-family:'JetBrains Mono';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rye)}
+.comm-step2,.comm-done{display:none}
+.comm-note{font-family:'JetBrains Mono';font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rye);margin-top:10px}
+@media(max-width:860px){.comm-grid{grid-template-columns:1fr;gap:32px}}
+
 /* SECTION HEAD */
 .shead{margin-bottom:40px;max-width:60ch}
 .shead .eyebrow{display:block;margin-bottom:16px}
@@ -191,6 +210,48 @@ footer.foot{background:var(--navy);color:var(--paper-warm);padding:64px 0 48px}
     <span class="go">See the coaching practice →</span>
   </a>
 </div></div></section>
+
+<!-- COMMUNITY WAITLIST -->
+<section class="community"><div class="wrap"><div class="comm-grid">
+  <div>
+    <span class="eyebrow">Coming Soon · Founding Members</span>
+    <h2>The MaxLife <span class="accent">Community</span></h2>
+    <p>Weekly live Q&amp;As with the coaches and founders you hear on the podcast. Ask the question you'd never get to ask from the audience, and climb with people building the same kind of life.</p>
+    <p><strong>The doors aren't open yet. The waitlist is.</strong> Founding members get first seat, and the binder below to start on today.</p>
+  </div>
+  <div class="comm-card">
+    <span class="k">Free while you wait</span>
+    <h3>The MaxLife Worksheet Binder</h3>
+    <p class="sub2">Every episode's reflection worksheet, 75+ and counting, in one printable bundle. Five sharp questions per episode from the best coaches and founders we've sat with. Three-hole punch it and work through your business and your life one page at a time.</p>
+    <form class="comm-form" id="commStep1" onsubmit="return commNext(event)">
+      <input type="email" required placeholder="Your best email" id="commEmail">
+      <button class="btn-primary" type="submit">Get the Binder + Join the Waitlist</button>
+      <span class="comm-note">The binder lands in your inbox. No noise after that, just the open date.</span>
+    </form>
+    <form class="comm-form comm-step2" id="commStep2" onsubmit="return commDone(event)">
+      <p class="sub2"><strong>You're on the list.</strong> Want a founding member seat? Two minutes moves you up.</p>
+      <label>Phone (optional)</label>
+      <input type="tel" placeholder="Phone">
+      <label>Annual business revenue</label>
+      <select><option>Under $250K</option><option>$250K – $1M</option><option>$1M – $5M</option><option>$5M – $50M</option><option>$50M+</option></select>
+      <label>What do you most want out of the community?</label>
+      <textarea placeholder="The honest version"></textarea>
+      <label>What does a MaxLife mean to you?</label>
+      <textarea placeholder="There's no wrong answer"></textarea>
+      <button class="btn-primary" type="submit">Apply for a Founding Seat</button>
+      <span class="comm-note">Skippable. The binder's already yours either way.</span>
+    </form>
+    <div class="comm-done" id="commDone">
+      <h3>You're in line.</h3>
+      <p class="sub2">Check your inbox for the binder. We'll write when the doors open, founding members first.</p>
+    </div>
+  </div>
+</div></div></section>
+
+<script>
+function commNext(e){e.preventDefault();document.getElementById('commStep1').style.display='none';document.getElementById('commStep2').style.display='flex';return false}
+function commDone(e){e.preventDefault();document.getElementById('commStep2').style.display='none';document.getElementById('commDone').style.display='block';return false}
+</script>
 
 <!-- LATEST EPISODES -->
 <section class="episodes"><div class="wrap">
